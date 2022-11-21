@@ -1,0 +1,37 @@
+tr > :first-child {
+    width: 75%;
+}
+tr > :last-child {
+    width: 25%;
+}
+
+tr:not(:first-child) > td:last-child {
+    vertical-align: middle;
+}
+
+th {
+    text-align: center;
+    border: 2px solid #F20505 !important;
+}
+
+td {
+    border-bottom: 2px solid black;
+}
+
+ul {
+    list-style-type: none;
+}
+ul > li:before {
+    content: "- ";
+}
+
+.card {
+    border-color: #0511F2;
+    background-color: #F2F2F2;
+}
+
+select {
+    width: 100%;
+    text-align: center;
+    height: 40px;
+}
