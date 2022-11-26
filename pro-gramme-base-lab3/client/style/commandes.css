@@ -9,13 +9,22 @@ tr:not(:first-child) > td:last-child {
     vertical-align: middle;
 }
 
+td:first-child:hover{
+    cursor: pointer;
+}
+
 th {
     text-align: center;
     border: 2px solid #F20505 !important;
+    margin-bottom: 105px;
 }
 
-td {
+tr:not(:last-child) > td {
     border-bottom: 2px solid black;
+}
+
+tr:last-child > td {
+    border-bottom: none;
 }
 
 ul {

@@ -1,6 +1,7 @@
 let TOKEN_ADMIN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZENsaWVudCI6MCwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjM2NzUyMzAxLCJleHAiOjE4MzY3NTk1MDF9.QYtVOl6o87doRiT2EsezLqtSpz27K-nEZ4KqcmZV5Ac";
 
-let status_list;
+let status_list_values;
+let status_list_keys;
 
 function chargercommandes(){
     $.ajax({
@@ -12,8 +13,8 @@ function chargercommandes(){
         success: function( result ) {
             $.each(result, function (key, value) {
                 getStatus().then(function(status) {
-                    status_list = status;
-                    console.log(status_list);
+                    status_list_values = Object.values(status);
+                    status_list_keys = Object.keys(status);
                     commandes_to_html(value).then(function(item) {
                         $('#table_commandes').append(item);
                     });
@@ -31,7 +32,6 @@ function commandes_to_html(item) {
             if (client == undefined) {
                 return $('');
             }
-            //console.log(item);
 
             table_data_commande = $('<td></td>')
             table_data_status = $('<td></td>');
@@ -61,13 +61,26 @@ function commandes_to_html(item) {
             });
             produits.append(liste_produits);
 
-
+            liste_status = $('<select id="vente_'+item.id+'" onchange="updateStatus('+item.id+')"></select>');
+            for (i = 0; i < status_list_values.length; ++i) {
+                if (item.status == status_list_keys[i]) {
+                    option = $('<option value="' + status_list_keys[i] + '" selected></option>')
+                        .append(status_list_values[i]);
+                    liste_status.append(option);
+                }
+                else {
+                    option = $('<option value="' + status_list_keys[i] + '"></option>')
+                        .append(status_list_values[i]);
+                    liste_status.append(option);
+                }
+            }
+            table_data_status.append(liste_status);
 
             card_body.append(card_title).append('<br>').append(adresse).append(produits);
             card.append(card_body);
             table_data_commande.append(card);
 
-            resolve($('<tr></tr>').append(table_data_commande));
+            resolve($('<tr></tr>').append(table_data_commande).append(table_data_status));
         });
     });
 }
@@ -102,6 +115,24 @@ function getStatus() {
                reject(err);
            }
         });
+    });
+}
+
+function updateStatus(idVente) {
+    let status = document.getElementById('vente_'+idVente).value;
+    $.ajax({
+        url: "/ventes/" + idVente,
+        method:"PUT",
+        data: {"status": status},
+        beforeSend: function (xhr){
+            xhr.setRequestHeader('Authorization', "Basic "+ TOKEN_ADMIN);
+        },
+        success: function( result ) {
+            resolve(result);
+        },
+        error: function (err) {
+            reject(err);
+        }
     });
 }
 
