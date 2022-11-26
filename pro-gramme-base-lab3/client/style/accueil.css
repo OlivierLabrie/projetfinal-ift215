@@ -1,0 +1,20 @@
+
+.search_bar {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+
+.button_categorie{
+    background-color: #666DF2;
+    padding-left: 171px;
+    padding-right: 171px;
+    padding-bottom: 100px;
+    padding-top: 100px;
+    margin-left: 100px;
+    margin-bottom: 40px;
+    cursor: pointer;
+    font-size: 30px;
+
+}

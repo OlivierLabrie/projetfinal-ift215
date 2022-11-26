@@ -228,3 +228,26 @@ form .group select{
 .centrer {
     text-align: center;
 }
+
+.search_bar {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+
+.button {
+    background-color: #666DF2;
+    width: 500px;
+    height: 200px;
+    margin-left: 100px;
+    margin-bottom: 40px;
+    cursor: pointer;
+    font-size: 30px;
+    text-align: center;
+}
+
+
+
+
+
