@@ -137,7 +137,7 @@ class GestionClient {
         res.status(400).send(`Le produit avec l'id ${idProduit} n'a pas été trouvé.`);
         return;
       }
-      if (!(produit.qte_inventaire > quantite)) {
+      if (!(produit.qte_inventaire >= 0)) {
         res.status(400).send(`Il n'y a que ${produit.qte_inventaire} de disponible.  Impossible de réserver ${quantite} exemplaires.`);
         return;
       }

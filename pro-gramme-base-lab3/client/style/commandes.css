@@ -1,3 +1,16 @@
+.card {
+    border-color: #0511F2;
+    background-color: #F2F2F2;
+}
+
+.card:hover{
+    cursor: pointer;
+}
+
+.card-header {
+    background-color: #D9D9D9;
+}
+
 tr > :first-child {
     width: 75%;
 }
@@ -7,15 +20,20 @@ tr > :last-child {
 
 tr:not(:first-child) > td:last-child {
     vertical-align: middle;
+    text-align: center;
+}
+
+tr:not(:last-child) > td {
+    border-bottom: 2px solid black;
+}
+
+tr:last-child > td {
+    border-bottom: none;
 }
 
 th {
     text-align: center;
     border: 2px solid #F20505 !important;
-}
-
-td {
-    border-bottom: 2px solid black;
 }
 
 ul {
@@ -25,13 +43,8 @@ ul > li:before {
     content: "- ";
 }
 
-.card {
-    border-color: #0511F2;
-    background-color: #F2F2F2;
-}
-
 select {
-    width: 100%;
+    width: 75%;
     text-align: center;
     height: 40px;
 }
