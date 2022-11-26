@@ -14,7 +14,7 @@
         },
         "historique": [
             {
-                "id": -1,
+                "id": 0,
                 "idClient": 1,
                 "montant": 99.04,
                 "produits": [
@@ -27,7 +27,7 @@
                         "quantite": 4
                     }
                 ],
-                "status": "reçue",
+                "status": "recue",
                 "date": "2021-11-13T21:44:38.858Z"
             }
         ]
