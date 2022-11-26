@@ -115,13 +115,13 @@ function remove_item(item) {
 
 function load_panier(item) {
 
-    image = $('<img src="../images/' + item.nomProduit + '.png" />');
+    image = $('<img src="../images/' + item.nomProduit + '.png" style = "border-right: 2px solid #666DF2"/>');
     nom = $('<td></td>').append(item.nomProduit);
     prix = $('<td></td>').append(item.prix);
-    qte = $('<td></td>').append(1);
+    qte = $('<td><button></button></td>').append(1);
     total = $('<td></td>').append(1 * item.prix);
     trash = $('<td></td>')
         .append('<button type="button" class="btn" onClick="remove_item([' + item.id + '])"><span class="bi bi-trash" aria-hidden="true"></span></button>')
 
-    return $('<tr></tr>').append(image).append(nom).append(prix).append(qte).append(total).append(trash);
+    return $('<tr style = "border: 4px solid #666DF2"></tr>').append(image).append(nom).append(prix).append(qte).append(total).append(trash);
 }

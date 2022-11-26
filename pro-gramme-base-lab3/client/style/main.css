@@ -228,3 +228,9 @@ form .group select{
 .centrer {
     text-align: center;
 }
+
+.table {
+
+    border: 4px solid #F20505;
+}
+
