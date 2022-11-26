@@ -137,7 +137,7 @@ function updateStatus(idVente) {
 }
 
 function redirectToCommand(idVente) {
-    window.location.replace('#/commande_client?idVente=' + idVente);
+    window.location.replace('#/commandeclient?idVente=' + idVente);
 }
 
 /*

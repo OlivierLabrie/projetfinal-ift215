@@ -1,3 +1,16 @@
+.card {
+    border-color: #0511F2;
+    background-color: #F2F2F2;
+}
+
+.card:hover{
+    cursor: pointer;
+}
+
+.card-header {
+    background-color: #D9D9D9;
+}
+
 tr > :first-child {
     width: 75%;
 }
@@ -10,8 +23,12 @@ tr:not(:first-child) > td:last-child {
     text-align: center;
 }
 
-.card:hover{
-    cursor: pointer;
+tr:not(:last-child) > td {
+    border-bottom: 2px solid black;
+}
+
+tr:last-child > td {
+    border-bottom: none;
 }
 
 th {
@@ -19,28 +36,11 @@ th {
     border: 2px solid #F20505 !important;
 }
 
-tr:not(:last-child) > td {
-    border-bottom: 2px solid black;
-}
-
-.card-header {
-    background-color: #D9D9D9;
-}
-
-tr:last-child > td {
-    border-bottom: none;
-}
-
 ul {
     list-style-type: none;
 }
 ul > li:before {
     content: "- ";
-}
-
-.card {
-    border-color: #0511F2;
-    background-color: #F2F2F2;
 }
 
 select {
