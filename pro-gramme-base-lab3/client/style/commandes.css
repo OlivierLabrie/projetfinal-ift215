@@ -7,20 +7,24 @@ tr > :last-child {
 
 tr:not(:first-child) > td:last-child {
     vertical-align: middle;
+    text-align: center;
 }
 
-td:first-child:hover{
+.card:hover{
     cursor: pointer;
 }
 
 th {
     text-align: center;
     border: 2px solid #F20505 !important;
-    margin-bottom: 105px;
 }
 
 tr:not(:last-child) > td {
     border-bottom: 2px solid black;
+}
+
+.card-header {
+    background-color: #D9D9D9;
 }
 
 tr:last-child > td {
@@ -40,7 +44,7 @@ ul > li:before {
 }
 
 select {
-    width: 100%;
+    width: 75%;
     text-align: center;
     height: 40px;
 }

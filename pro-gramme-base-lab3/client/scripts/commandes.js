@@ -36,14 +36,14 @@ function commandes_to_html(item) {
             table_data_commande = $('<td></td>')
             table_data_status = $('<td></td>');
 
-            card = $('<div class="card"></div>');
+            card = $('<div class="card" onclick="window.location.replace(\'#/inscription\')"></div>');
 
             card_body = $('<div></div>')
                 .addClass('card-body');
 
             card_title = $('<h3></h3>')
-                .addClass('card-title')
-                .append('<u>' + client.prenom + ' ' + client.nom + '</u>');
+                .addClass('card-header')
+                .append(client.prenom + ' ' + client.nom);
 
             adresse = $('<p></p>')
                 .addClass('card-text')
@@ -76,8 +76,8 @@ function commandes_to_html(item) {
             }
             table_data_status.append(liste_status);
 
-            card_body.append(card_title).append('<br>').append(adresse).append(produits);
-            card.append(card_body);
+            card_body.append('<br>').append(adresse).append(produits);
+            card.append(card_title).append(card_body);
             table_data_commande.append(card);
 
             resolve($('<tr></tr>').append(table_data_commande).append(table_data_status));
@@ -134,6 +134,10 @@ function updateStatus(idVente) {
             reject(err);
         }
     });
+}
+
+function redirectToCommand() {
+
 }
 
 /*
