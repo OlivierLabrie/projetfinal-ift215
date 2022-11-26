@@ -1,3 +1,6 @@
+//const {validate} = require("express-validation");
+//const auth = require("../../middleware/auth");
+//const {gClients} = require("../../util/gestionnaires");
 let ID_CLIENT = 1;
 let TOKEN_CLIENT = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZENsaWVudCI6MSwicm9sZSI6ImNsaWVudCIsImlhdCI6MTYzNjc1MjI1MywiZXhwIjoxODM2NzUyMjUzfQ.qMcKC0NeuVseNSeGtyaxUvadutNAfzxlhL5LYPsRB8k";
 
@@ -24,6 +27,7 @@ function chargerpanier(){
         },
         success: function( result ) {
             $('#body_table').empty();
+            console.log(result);
             $.each(result.items, function (key, value) {
                 item = load_panier(value);
                 $('#body_table').append(item);
@@ -113,13 +117,43 @@ function remove_item(item) {
     });
 }
 
+function ajouterItem(item){
+
+$.ajax({
+    url:"/clients/"+ID_CLIENT+"/panier/" + item,
+    method:"PUT",
+    data: {'quantite': 1},
+    beforeSend: function (xhr){
+        xhr.setRequestHeader('Authorization', "Basic "+ TOKEN_CLIENT);
+    },
+    success: function( result ) {
+
+        chargerpanier();
+    }})
+}
+
+function enleverItem(item){
+
+    $.ajax({
+        url:"/clients/"+ID_CLIENT+"/panier/" + item,
+        method:"PUT",
+        data: {'quantite': -1},
+        beforeSend: function (xhr){
+            xhr.setRequestHeader('Authorization', "Basic "+ TOKEN_CLIENT);
+        },
+        success: function( result ) {
+
+            chargerpanier();
+        }})
+}
+
 function load_panier(item) {
 
     image = $('<img src="../images/' + item.nomProduit + '.png" style = "border-right: 2px solid #666DF2"/>');
     nom = $('<td></td>').append(item.nomProduit);
     prix = $('<td></td>').append(item.prix);
-    qte = $('<td><button></button></td>').append(1);
-    total = $('<td></td>').append(1 * item.prix);
+    qte = $('<td><button onclick="ajouterItem('+ item.id + ')">+</button><button onclick="enleverItem('+ item.id + ')">-</button></td>').append(item.quantite);
+    total = $('<td></td>').append(Math.round(item.quantite * item.prix * 100) / 100);
     trash = $('<td></td>')
         .append('<button type="button" class="btn" onClick="remove_item([' + item.id + '])"><span class="bi bi-trash" aria-hidden="true"></span></button>')
 
