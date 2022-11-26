@@ -131,7 +131,7 @@ fieldset{
     max-width: 500px;
 }
 form .group{
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 form .group label{
@@ -139,6 +139,7 @@ form .group label{
     width: 45%;
     margin-right: 5%;
     text-align: right;
+    font-size: 35px;
 }
 
 form .group select{
@@ -228,3 +229,21 @@ form .group select{
 .centrer {
     text-align: center;
 }
+
+#connexion{
+    position: static;
+    left: 30px;
+    border: 4px solid #F20505;
+    width:20%;
+    margin-left: 250px;
+    margin-top: 50px;
+    text-align: center;
+    font-size: x-large;
+    float:left;
+}
+
+#logo-connexion{
+    margin-left:900px;
+    marin-top:250px;
+}
+
