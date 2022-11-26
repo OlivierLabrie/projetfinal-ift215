@@ -36,7 +36,7 @@ function commandes_to_html(item) {
             table_data_commande = $('<td></td>')
             table_data_status = $('<td></td>');
 
-            card = $('<div class="card" onclick="window.location.replace(\'#/inscription\')"></div>');
+            card = $('<div class="card" onclick="redirectToCommand(' + item.id + ')"></div>');
 
             card_body = $('<div></div>')
                 .addClass('card-body');
@@ -136,8 +136,8 @@ function updateStatus(idVente) {
     });
 }
 
-function redirectToCommand() {
-
+function redirectToCommand(idVente) {
+    window.location.replace('#/commandeclient?idVente=' + idVente);
 }
 
 /*

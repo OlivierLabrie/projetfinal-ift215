@@ -1,0 +1,19 @@
+.card {
+    background-color: #F2F2F2;
+}
+
+.card:hover{
+    cursor: pointer;
+}
+
+.card-header {
+    background-color: #D9D9D9;
+}
+
+#client_infos {
+    border: 1px solid black;
+}
+
+#client_infos .card-header {
+    border-bottom : 1px solid black;
+}
