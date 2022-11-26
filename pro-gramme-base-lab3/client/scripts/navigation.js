@@ -10,6 +10,9 @@ document.addEventListener('DOMContentLoaded', function(){
  */
 function chargerSousContenu(){
     let nom = "charger" + location.hash.replace('#/', '');
+    if (nom.indexOf('?') != -1) {
+        nom = nom.substring(0, nom.indexOf('?'));
+    }
     console.log("Appel de la fonction: " + nom)
     window[nom]();
 }
