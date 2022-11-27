@@ -224,5 +224,38 @@
         ],
         "status": "reçue",
         "date": "2022-11-27T21:10:32.106Z"
+    },
+    {
+        "id": 11,
+        "idClient": "1",
+        "montant": 126.03000000000002,
+        "produits": [
+            {
+                "id": 1,
+                "idProduit": 1,
+                "nomProduit": "Tomate",
+                "descriptionProduit": "Un poirier est une espèce d'arbre qui offre de bons suppléments",
+                "prix": 24.76,
+                "quantite": 3
+            },
+            {
+                "id": 3,
+                "idProduit": 0,
+                "nomProduit": "Banane",
+                "descriptionProduit": "Un poirier est une espèce d'arbre qui offre de bons suppléments",
+                "prix": 24.76,
+                "quantite": 2
+            },
+            {
+                "id": 4,
+                "idProduit": 2,
+                "nomProduit": "Concombre",
+                "descriptionProduit": "pas un jouet",
+                "prix": 2.23,
+                "quantite": 1
+            }
+        ],
+        "status": "reçue",
+        "date": "2022-11-27T21:50:43.722Z"
     }
 ]
