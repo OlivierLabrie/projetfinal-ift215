@@ -31,6 +31,8 @@ function chargerpanier(){
             $.each(result.items, function (key, value) {
                 item = load_panier(value);
                 $('#body_table').append(item);
+                chargerTotal();
+
             });
         }
     });
@@ -161,4 +163,21 @@ function load_panier(item) {
 
 
     return $('<tr style = "border: 4px solid #666DF2"></tr>').append(image).append(nom).append(prix).append(qte).append(total).append(trash);
+}
+
+function chargerTotal(){
+    $.ajax({
+        url: "/clients/"+ID_CLIENT+"/panier",
+        method:"GET",
+        beforeSend: function (xhr){
+            xhr.setRequestHeader('Authorization', "Basic "+ TOKEN_CLIENT);
+        },
+        success: function( result){
+            $('#prixTOT').text(`Total : `+ Math.round(result.valeur * 100) / 100);
+            for( let i in result.items){
+                item = produit_to_html(result.items[i])
+                $('#list_panier').append(item);
+            }
+        }
+    });
 }
