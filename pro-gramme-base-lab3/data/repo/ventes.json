@@ -191,5 +191,38 @@
         ],
         "status": "reçue",
         "date": "2022-11-27T20:59:48.803Z"
+    },
+    {
+        "id": 10,
+        "idClient": "1",
+        "montant": 6.6899999999999995,
+        "produits": [
+            {
+                "id": 0,
+                "idProduit": 5,
+                "nomProduit": "Shake de protéine",
+                "descriptionProduit": "Shake avec un arrière goût de métal",
+                "prix": 2.23,
+                "quantite": 1
+            },
+            {
+                "id": 1,
+                "idProduit": 6,
+                "nomProduit": "Meilleur plan",
+                "descriptionProduit": "Un plan de grande qualité",
+                "prix": 2.23,
+                "quantite": 1
+            },
+            {
+                "id": 2,
+                "idProduit": 7,
+                "nomProduit": "roche",
+                "descriptionProduit": "Une roche avec un potentiel infini pour les propriétés.  Peut-être aussi que ce n'est qu'une roche",
+                "prix": 2.23,
+                "quantite": 1
+            }
+        ],
+        "status": "reçue",
+        "date": "2022-11-27T21:10:32.106Z"
     }
 ]
