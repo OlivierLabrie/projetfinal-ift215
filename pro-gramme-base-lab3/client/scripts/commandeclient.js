@@ -42,3 +42,20 @@ function load_produit(produit) {
 
     return $('<tr></tr>').append(image).append(nom).append(qte);
 }
+
+function delete_vente() {
+    $.ajax({
+        url: "/ventes/" + idVente,
+        method:"DELETE",
+        data: {'idClient': vente_info.idClient},
+        beforeSend: function (xhr){
+            xhr.setRequestHeader('Authorization', "Basic "+ TOKEN_ADMIN);
+        },
+        success: function(result) {
+            $('#succesSuppressionModal').modal('toggle');
+        },
+        error: function(result) {
+            $('#erreurSuppressionModal').modal('toggle');
+        }
+    });
+}

@@ -45,10 +45,64 @@
   </div>
 </div>
 <br>
+<br>
 <div class="row">
   <div class="col-1"></div>
-  <div class="col-10">
-    
+  <div class="col-10 text-center">
+    <button type="button" class="btn btn-danger" onclick="$('#supprimerCommandeModal').modal('show')">Supprimer cette commande</button>
+  </div>
+</div>
+
+<!--Pop up quand on veut supprimer la commande-->
+<div class="modal" tabindex="-1" role="dialog" id="supprimerCommandeModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Suppresion de la commande</h5>
+        <button type="button" data-bs-dismiss="modal" aria-label="Close" style="border: none !important">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Êtes-vous certain de vouloir supprimer cette commande?</p>
+        <p style="color: darkred"><strong>(Cette action est irréversible)</strong></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" onclick="$('#supprimerCommandeModal').modal('toggle'); delete_vente()">Supprimer définitivement</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Pop up quand la commande est belle et bien supprimée-->
+<div class="modal" tabindex="-1" role="dialog" id="succesSuppressionModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Commande supprimée avec succès!</h5>
+        <button type="button" data-bs-dismiss="modal" aria-label="Close" style="border: none !important">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ok</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Pop up quand la commande n'est pas supprimée-->
+<div class="modal" tabindex="-1" role="dialog" id="erreurSuppressionModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">La commande n'a pas pu être supprimée.</h5>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ok</button>
+      </div>
+    </div>
   </div>
 </div>
 </body>

@@ -53,3 +53,7 @@ th:last-child {
 table {
     width: 100%;
 }
+
+.btn-danger {
+    font-size: 18px;
+}

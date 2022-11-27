@@ -23,7 +23,7 @@ class GestionVentes {
     const id = parseInt(req.params.idVente);
     const vente = this.collectionVente.recupereVentes(id);
     if (vente) {
-      if (vente.status === this.statusPossibles.recue) {
+      if (vente.status === Object.keys(this.statusPossibles).find(key => this.statusPossibles[key] == 'reçue')) {
         this.collectionVente.effacerVente(vente);
         for (const i in vente.produits) {
           const itemPanier = vente.produits[i];
