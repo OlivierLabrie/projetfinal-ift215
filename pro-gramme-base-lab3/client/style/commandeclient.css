@@ -17,3 +17,39 @@
 #client_infos .card-header {
     border-bottom : 1px solid black;
 }
+
+td {
+    vertical-align: middle;
+    text-align: center;
+    border-top: 2px solid #0511F2;
+    border-bottom: 2px solid #0511F2;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+td:first-child {
+    border-left: 2px solid #0511F2;
+    border-right: 2px solid #0511F2;
+}
+
+td:last-child {
+    border-right: 2px solid #0511F2;
+}
+
+th:not(:first-child) {
+    text-align: center;
+    border: 2px solid #F20505;
+}
+
+th:nth-child(2) {
+    border-right: none;
+}
+
+th:last-child {
+    border-left: none;
+}
+
+table {
+    width: 100%;
+}

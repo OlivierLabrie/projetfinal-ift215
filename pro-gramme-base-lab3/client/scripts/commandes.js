@@ -139,17 +139,3 @@ function updateStatus(idVente) {
 function redirectToCommand(idVente) {
     window.location.replace('#/commandeclient?idVente=' + idVente);
 }
-
-/*
-FOR GETTING THE PARAMETER INSIDE THE URL FOR COMMANDS OF SPECIFIC CLIENT
-
-    window.location.replace("#/employe?id=1");
-
-    var myUrl = new URL(window.location.href.replace(/#/g,""));
-
-    console.log(myUrl);
-
-    var param_value = myUrl.searchParams.get("id");
-
-    console.log(param_value);
- */
