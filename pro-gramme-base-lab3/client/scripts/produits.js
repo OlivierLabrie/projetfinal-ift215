@@ -173,11 +173,17 @@ function chargerTotal(){
             xhr.setRequestHeader('Authorization', "Basic "+ TOKEN_CLIENT);
         },
         success: function( result){
-            $('#prixTOT').text(`Total : `+ Math.round(result.valeur * 100) / 100);
+            $('#prixTOT').text('Total de la commande : '+ Math.round(result.valeur * 100) / 100 + ' $');
+            $('#buttonConfirmer').text('Confirmer la commande');
             for( let i in result.items){
-                item = produit_to_html(result.items[i])
+                item = item_to_html(result.items[i])
                 $('#list_panier').append(item);
             }
         }
     });
+}
+
+function confirmation(){
+    console.log("Test Test")
+    window.location.replace('#/confirmationcommande');
 }
