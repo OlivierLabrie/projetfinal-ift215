@@ -21,6 +21,10 @@ function accesCommande(){
     window.location.replace('#/commandes');
 }
 
+function retourAccueil(){
+    window.location.replace('#/');
+}
+
 /**
  * Fonction qui initie le lancement des fonctions de ce script. Appelée par "chargerSousContenu" dans navigation.js.
  * Remplace le DOMContentLoaded qui est lancé bien avant que le contenu associé à ce script ne soit dans l'écran.

@@ -9,25 +9,8 @@
         "courriel": "aaa@bbb.com",
         "mdp": "$2b$08$CEfAuisfWI/driqC4REyfOo/y8RG0g1dw7ngClRLBk1QANEs.U53u",
         "panier": {
-            "valeur": 465.55,
-            "items": [
-                {
-                    "id": 0,
-                    "idProduit": 5,
-                    "nomProduit": "Shake",
-                    "descriptionProduit": "Shake avec un arrière goût de métal",
-                    "prix": 15.55,
-                    "quantite": 1
-                },
-                {
-                    "id": 1,
-                    "idProduit": 4,
-                    "nomProduit": "Coupe-Vent",
-                    "descriptionProduit": "Pour fendre le vent",
-                    "prix": 450,
-                    "quantite": 1
-                }
-            ]
+            "valeur": 0,
+            "items": []
         },
         "historique": [
             {
@@ -131,7 +114,7 @@
                 "date": "2022-11-27T21:10:32.106Z"
             },
             {
-                "id": 11,
+                "id": -1,
                 "idClient": "1",
                 "montant": 126.03000000000002,
                 "produits": [
@@ -161,7 +144,7 @@
                     }
                 ],
                 "status": "reçue",
-                "date": "2022-11-27T21:26:51.334Z"
+                "date": "2022-11-27T21:50:43.722Z"
             }
         ]
     },
