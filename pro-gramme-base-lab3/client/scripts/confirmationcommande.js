@@ -1,7 +1,4 @@
-
-
-
-function chargerpanier(){
+function chargerconfirmationcommande(){
     $.ajax({
         url: "/clients/"+ID_CLIENT+"/panier",
         method:"GET",
@@ -12,14 +9,14 @@ function chargerpanier(){
             $('#body_table').empty();
             console.log(result);
             $.each(result.items, function (key, value) {
-                item = load_panier(value);
+                item = load_panier_commande(value);
                 $('#body_table').append(item);
             });
         }
     });
 }
 
-function load_panier(item) {
+function load_panier_commande(item) {
 
 
     image = $('<img src="../images/' + item.nomProduit + '.png" style = "border-right: 2px solid #666DF2"/>');
