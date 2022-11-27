@@ -184,6 +184,5 @@ function chargerTotal(){
 }
 
 function confirmation(){
-    console.log("Test Test")
     window.location.replace('#/confirmationcommande');
 }

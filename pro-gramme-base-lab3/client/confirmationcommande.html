@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<button class="button_retour">Retour aux produits</button>
+<button class="button_retour" onclick="retourPanier()">Retour au panier</button>
 <div class="confirmation_commande">
   <h1>Veuillez confimer votre commande</h1>
   <hr>
@@ -18,9 +18,10 @@
     <table class="table">
       <thead>
       <tr>
+        <th></th>
         <th>Nom</th>
         <th>Quantité</th>
-        <th>Prix unité</th>
+        <th>Prix unité ($)</th>
       </tr>
       </thead>
       <tbody id="body_table">
@@ -39,9 +40,9 @@
       <dt>+ livraison</dt>
     </dl>
     <dl class="prix">
-      <dt>0 $</dt>
-      <dt>0 $</dt>
-      <dt>0 $</dt>
+      <dt id="prixTOT">Coût total</dt>
+      <dt id="taxes">Taxes</dt>
+      <dt>15 $</dt>
     </dl>
   </div>
   <hr>
@@ -51,16 +52,68 @@
       <dt>Date de livraison estimée</dt>
     </dl>
     <dl>
-      <dt class="prix_total">0 $</dt>
+      <dt class="prix_total" id="grandtotal">Prix total</dt>
       <dt class="date">DD/MM/YYYY</dt>
     </dl>
   </div>
   <hr>
+  <div>
+    <button class="buttonConfirmation" onclick="$('#supprimerCommandeModal').modal('show')">Transformer Panier en Vente</button>
+  </div>
 </div>
 
-<div>
-  <button class="buttonConfirmation" id="buttonConfirmer" onclick="vente()">Transformer Panier en Vente</button>
+
+<!--Pop up quand on veut confirmer la commande-->
+<div class="modal" tabindex="-1" role="dialog" id="supprimerCommandeModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Confirmation de la commande</h5>
+        <button type="button" data-bs-dismiss="modal" aria-label="Close" style="border: none !important">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Êtes-vous certain de vouloir envoyer cette commande?</p>
+        <p style="color: darkred"><strong>(Cette action est irréversible)</strong></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" onclick="$('#supprimerCommandeModal').modal('toggle'); vente()">Confirmer</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+      </div>
+    </div>
+  </div>
 </div>
 
+<!--Pop up quand la commande est belle et bien confirmé-->
+<div class="modal" tabindex="-1" role="dialog" id="succesSuppressionModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Commande envoyée avec succès!</h5>
+        <button type="button" data-bs-dismiss="modal" aria-label="Close" style="border: none !important">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ok</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Pop up quand la commande n'est pas confirmé-->
+<div class="modal" tabindex="-1" role="dialog" id="erreurSuppressionModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">La commande n'a pas pu être envoyée.</h5>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ok</button>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>

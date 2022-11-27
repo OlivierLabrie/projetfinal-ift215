@@ -252,6 +252,7 @@ form .group select{
 
 .button_retour {
     margin-left: 40px;
+    margin-top: 30px;
 }
 
 .confirmation_commande {
@@ -263,12 +264,13 @@ form .group select{
 }
 
 .prix {
-    text-align: center;
+    text-align: end;
     padding-left: 150px;
 }
 
 .bas_page {
     display: inline-block;
+    float: right;
 }
 
 dl {
@@ -276,21 +278,21 @@ dl {
 }
 
 .premiere_ligne {
-    margin-left: 1250px;
+
 }
 
 .deuxieme_ligne {
-    margin-left: 1230px;
+
 }
 
 .prix_total {
-    text-align: center;
+    text-align: end;
     padding-left: 100px;
     font-size: 20px;
 }
 
 .date {
-    text-align: center;
+    text-align: end;
     padding-left: 100px;
 }
 
@@ -305,7 +307,7 @@ dl {
 }
 
 .buttonConfirmation {
-    margin-left: 1150px;
+    float: right;
     margin-top: 30px;
 }
 
