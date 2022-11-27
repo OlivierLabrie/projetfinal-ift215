@@ -3,39 +3,104 @@
         "id": 0,
         "serial": "we23545",
         "nom": "Banane",
-        "description": "Un poirier est une espèce d'arbre qui offre de bons suppléments",
+        "description": "Banane jaune",
         "prix": 24.76,
         "qte_inventaire": 9,
         "categorie": {
             "id": 1,
-            "nom": "Prunier",
-            "description": "Un poirier est une espèce d'arbre qui offre de bons suppléments"
+            "nom": "Nutrition",
+            "description": "Toute sortes d'aliments pour vous aidez à atteindre vos objectifs"
         }
     },
     {
         "id": 1,
         "serial": "we23545",
         "nom": "Tomate",
-        "description": "Un poirier est une espèce d'arbre qui offre de bons suppléments",
+        "description": "Tomate de serre",
         "prix": 24.76,
-        "qte_inventaire": 10,
+        "qte_inventaire": 9,
         "categorie": {
-            "id": 2,
-            "nom": "Banane",
-            "description": "Un poirier est une espèce d'arbre qui offre de bons suppléments"
+            "id": 1,
+            "nom": "Nutrition",
+            "description": "Toute sortes d'aliments pour vous aidez à atteindre vos objectifs"
         }
     },
     {
         "id": 2,
         "serial": "sdfds",
         "nom": "Concombre",
-        "description": "pas un jouet",
+        "description": "Cucurbitaceae de forme cylindrique",
         "prix": 2.23,
-        "qte_inventaire": 10,
+        "qte_inventaire": 9,
         "categorie": {
             "id": 1,
-            "nom": "Prunier",
-            "description": "Un poirier est une espèce d'arbre qui offre de bons suppléments"
+            "nom": "Nutrition",
+            "description": "Toute sortes d'aliments pour vous aidez à atteindre vos objectifs"
+        }
+    },
+    {
+        "id": 3,
+        "serial": "12234ssafw",
+        "nom": "Poids",
+        "description": "Poids et haltère de grande qualité",
+        "prix": 123.45,
+        "qte_inventaire": 9,
+        "categorie": {
+            "id": 2,
+            "nom": "Poids",
+            "description": "Poids et haltères qui vous permettront d'atteindre vos objectifs"
+        }
+    },
+    {
+        "id": 4,
+        "serial": "342234ssafw",
+        "nom": "Coupe-Vent",
+        "description": "Pour fendre le vent",
+        "prix": 2.23,
+        "qte_inventaire": 9,
+        "categorie": {
+            "id": 3,
+            "nom": "Vetement",
+            "description": "Une gamme de vêtement haut de gamme pour vous permettre d'atteindre vos objectifs"
+        }
+    },
+    {
+        "id": 5,
+        "serial": "sae3fw",
+        "nom": "Shake de protéine",
+        "description": "Shake avec un arrière goût de métal",
+        "prix": 2.23,
+        "qte_inventaire": 8,
+        "categorie": {
+            "id": 4,
+            "nom": "Supplement",
+            "description": "Un petit boost dont vous rêvez dans la quête de l'obtention de vos objectifs"
+        }
+    },
+    {
+        "id": 6,
+        "serial": "sa24e3fw",
+        "nom": "Meilleur plan",
+        "description": "Un plan de grande qualité",
+        "prix": 2.23,
+        "qte_inventaire": 8,
+        "categorie": {
+            "id": 5,
+            "nom": "Autre",
+            "description": "Un bon plan dépends de bons objectifs"
+        }
+    },
+    {
+        "id": 7,
+        "serial": "sae3f45",
+        "nom": "roche",
+        "description": "Une roche avec un potentiel infini pour les propriétés.  Peut-être aussi que ce n'est qu'une roche",
+        "prix": 2.23,
+        "qte_inventaire": 9,
+        "categorie": {
+            "id": 6,
+            "nom": "Nutrition",
+            "description": "Autres produits qui nous permettront d'atteindre nos objectifs de vente... je veux dire vos objectifs"
         }
     }
 ]

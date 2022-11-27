@@ -1,12 +1,32 @@
 [
     {
         "id": 1,
-        "nom": "Prunier",
-        "description": "Un poirier est une espèce d'arbre qui offre de bons suppléments"
+        "nom": "Nutrition",
+        "description": "Toute sortes d'aliments pour vous aidez à atteindre vos objectifs"
     },
     {
         "id": 2,
-        "nom": "Banane",
-        "description": "Un poirier est une espèce d'arbre qui offre de bons suppléments"
+        "nom": "Poids",
+        "description": "Poids et haltères qui vous permettront d'atteindre vos objectifs"
+    },
+    {
+        "id": 3,
+        "nom": "Vetement",
+        "description": "Une gamme de vêtement haut de gamme pour vous permettre d'atteindre vos objectifs"
+    },
+    {
+        "id": 4,
+        "nom": "Supplement",
+        "description": "Un petit boost dont vous rêvez dans la quête de l'obtention de vos objectifs"
+    },
+    {
+        "id": 5,
+        "nom": "Plan",
+        "description": "Un bon plan dépend de bons objectis"
+    },
+    {
+        "id": 6,
+        "nom": "Autre",
+        "description": "Autres produits qui nous permettront d'atteindre nos objectifs de vente... je veux dire vos objectifs"
     }
 ]

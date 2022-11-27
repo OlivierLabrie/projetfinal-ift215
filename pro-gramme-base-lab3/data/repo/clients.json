@@ -79,6 +79,56 @@
                 ],
                 "status": "reçue",
                 "date": "2022-11-27T20:02:27.492Z"
+            },
+            {
+                "id": -1,
+                "idClient": "1",
+                "montant": 26.990000000000002,
+                "produits": [
+                    {
+                        "id": 0,
+                        "idProduit": 1,
+                        "nomProduit": "Tomate",
+                        "descriptionProduit": "Tomate de serre",
+                        "prix": 24.76,
+                        "quantite": 1
+                    },
+                    {
+                        "id": 1,
+                        "idProduit": 2,
+                        "nomProduit": "Concombre",
+                        "descriptionProduit": "Cucurbitaceae de forme cylindrique",
+                        "prix": 2.23,
+                        "quantite": 1
+                    }
+                ],
+                "status": "reçue",
+                "date": "2022-11-27T20:48:28.850Z"
+            },
+            {
+                "id": -1,
+                "idClient": "1",
+                "montant": 4.46,
+                "produits": [
+                    {
+                        "id": 0,
+                        "idProduit": 5,
+                        "nomProduit": "Shake de protéine",
+                        "descriptionProduit": "Shake avec un arrière goût de métal",
+                        "prix": 2.23,
+                        "quantite": 1
+                    },
+                    {
+                        "id": 1,
+                        "idProduit": 6,
+                        "nomProduit": "Meilleur plan",
+                        "descriptionProduit": "Un plan de grande qualité",
+                        "prix": 2.23,
+                        "quantite": 1
+                    }
+                ],
+                "status": "reçue",
+                "date": "2022-11-27T20:59:48.803Z"
             }
         ]
     },
