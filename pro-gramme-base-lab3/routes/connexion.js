@@ -20,7 +20,7 @@ const idValidation = {
 /**
  * Connecte un usager avec son courriel et son mdp
  */
-router.post('/', validate(connexionValidation), gConnexion.connecte.bind(gConnexion));
+router.post('/:idClient', validate(connexionValidation), gConnexion.connecte.bind(gConnexion));
 
 /**
  * Déconnecte un usager avec son id
