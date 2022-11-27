@@ -30,3 +30,22 @@ function load_panier_commande(item) {
 
     return $('<tr style = "border: 4px solid #666DF2"></tr>').append(image).append(nom).append(prix).append(qte).append(total).append(trash);
 }
+
+
+function vente(){
+    $.ajax({
+        url: "/ventes",
+        method:"POST",
+        data: {'idClient': ID_CLIENT},
+        beforeSend: function (xhr){
+            xhr.setRequestHeader('Authorization', "Basic "+ TOKEN_CLIENT);
+        },
+        success: function(result) {
+            chargerconfirmationcommande();
+            console.log("Successs ")
+        },
+        error : function (result){
+            console.log("erreur");
+        }
+    })
+}
