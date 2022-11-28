@@ -41,4 +41,28 @@ router.get('/confirmationcommande', function(req, res){
     res.sendFile(path.join(__dirname + '/../client/confirmationcommande.html'));
 });
 
+router.get('/categorie', function(req, res){
+    res.sendFile(path.join(__dirname + '/../client/categorie.html'));
+});
+
+router.get('/categorie2', function(req, res){
+    res.sendFile(path.join(__dirname + '/../client/categorie2.html'));
+});
+
+router.get('/categorie3', function(req, res){
+    res.sendFile(path.join(__dirname + '/../client/categorie3.html'));
+});
+
+router.get('/categorie4', function(req, res){
+    res.sendFile(path.join(__dirname + '/../client/categorie4.html'));
+});
+
+router.get('/categorie5', function(req, res){
+    res.sendFile(path.join(__dirname + '/../client/categorie5.html'));
+});
+
+router.get('/categorie6', function(req, res){
+    res.sendFile(path.join(__dirname + '/../client/categorie6.html'));
+});
+
 module.exports = router

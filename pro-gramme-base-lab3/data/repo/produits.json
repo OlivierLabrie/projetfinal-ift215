@@ -56,8 +56,8 @@
         "serial": "342234ssafw",
         "nom": "Coupe-Vent",
         "description": "Pour fendre le vent",
-        "prix": 450.00,
-        "qte_inventaire": 9,
+        "prix": 450,
+        "qte_inventaire": 8,
         "categorie": {
             "id": 3,
             "nom": "Vetement",
@@ -70,7 +70,7 @@
         "nom": "Shake",
         "description": "Shake avec un arrière goût de métal",
         "prix": 15.55,
-        "qte_inventaire": 7,
+        "qte_inventaire": 6,
         "categorie": {
             "id": 4,
             "nom": "Supplement",
@@ -82,7 +82,7 @@
         "serial": "sa24e3fw",
         "nom": "Meilleur_plan",
         "description": "Un plan de grande qualité",
-        "prix": 325.00,
+        "prix": 325,
         "qte_inventaire": 7,
         "categorie": {
             "id": 5,

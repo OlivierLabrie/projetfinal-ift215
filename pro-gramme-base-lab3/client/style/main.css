@@ -211,6 +211,7 @@ form .group select{
 
 #corps-principal{
     margin-bottom: 25px;
+
 }
 
 @media screen and (max-width: 900px) {
@@ -314,7 +315,7 @@ dl {
 
 
 #connexion{
-    position: static;
+    position: relative;
     left: 30px;
     border: 4px solid #F20505;
     width:20%;
@@ -326,7 +327,14 @@ dl {
 }
 
 #logo-connexion{
-    margin-left:900px;
-    marin-top:250px;
+    position: relative;
+    margin-left:830px;
+    margin-top: 20px;
+    margin-bottom: 75px;
+
 }
 
+.button_vers_accueil{
+    margin-left:280px;
+    margin-top:30px;
+}
