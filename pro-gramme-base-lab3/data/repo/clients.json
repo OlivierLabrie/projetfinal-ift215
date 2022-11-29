@@ -9,8 +9,33 @@
         "courriel": "aaa@bbb.com",
         "mdp": "$2b$08$CEfAuisfWI/driqC4REyfOo/y8RG0g1dw7ngClRLBk1QANEs.U53u",
         "panier": {
-            "valeur": 0,
-            "items": []
+            "valeur": 132.35999999999999,
+            "items": [
+                {
+                    "id": 1,
+                    "idProduit": 1,
+                    "nomProduit": "Tomate",
+                    "descriptionProduit": "Tomate de serre",
+                    "prix": 3.34,
+                    "quantite": 2
+                },
+                {
+                    "id": 2,
+                    "idProduit": 3,
+                    "nomProduit": "Poids",
+                    "descriptionProduit": "Poids et haltère de grande qualité",
+                    "prix": 123.45,
+                    "quantite": 1
+                },
+                {
+                    "id": 3,
+                    "idProduit": 2,
+                    "nomProduit": "Concombre",
+                    "descriptionProduit": "Cucurbitaceae de forme cylindrique",
+                    "prix": 2.23,
+                    "quantite": 1
+                }
+            ]
         },
         "historique": [
             {

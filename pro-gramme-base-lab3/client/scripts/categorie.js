@@ -1,4 +1,5 @@
 let categorie;
+let test;
 
 function chargercategorie(){
     getCategorie();
@@ -7,9 +8,25 @@ function chargercategorie(){
         method: 'GET',
         success: function( result ) {
             $.each(result, function (key, value) {
-                if(value.categorie.id === categorie){
+                if(value.id == categorie){
+                    chargerproduitscategories();
+                }
+            });
+
+            set_panier_categorie();
+        }
+    });
+}
+
+function chargerproduitscategories(){
+    $.ajax({
+        url: "/produits",
+        success: function( result ) {
+            $.each(result, function (key, value) {
+                if(value.categorie.id == categorie){
                     item = item_to_html_categorie(value);
-                    $('#list_items').append(item);}
+                    $('#list_items').append(item);
+                }
             });
 
             set_panier_categorie();
