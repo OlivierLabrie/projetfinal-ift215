@@ -94,7 +94,11 @@ nav{
     height: 150px;
 }
 
-#texte-acceuil, #section-inscription, #section-pdv{
+#section-pdv{
+    width: 60%;
+    margin-left: 40%;
+}
+#texte-acceuil, #section-inscription{
     width: 66%;
     margin-left: 34%;
 }
