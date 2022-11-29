@@ -10,33 +10,119 @@
         <i class="bi bi-caret-left-fill"></i> Retour à l'accueil
     </button>
 </div>
-<div>
-    <section id="connexion">
+<div class="row">
+    <div class="col-sm-5">
+        <div>
+            <div id="connexion">
 
-        <h2>Connexion</h2>
-    </section>
-</div>
-<section id="logo-connexion">
-    <p>
-        <img src="images/login.png" alt="Logo de Pro-Gramme" width="200"  height="200"/>
-    </p>
-</section>
-<section id="section-inscription">
-    <form method="post" >
-        <fieldset id="#renseignement-auth">
-            <div class="group">
-                <label for="courriel"> Courriel</label>
-                <input type="email" name="courriel" id="courriel" required/>
+                <h2>Connexion</h2>
             </div>
-            <div class="group">
-                <label for="mot-de-passe">Mot de passe</label>
-                <input type="password" name="mot-de-passe" id="mot-de-passe" required/>
-            </div>
-        </fieldset>
-        <div class="group submit-group">
-            <input type="button" class="btn btn-primary" value="Connexion" onclick="versCommande()" />
         </div>
-    </form>
-</section>
+        <div id="logo-connexion">
+            <p>
+                <img src="images/login.png" alt="Logo de Pro-Gramme" width="200"  height="200"/>
+            </p>
+        </div>
+        <div id="section-inscription">
+            <form>
+                <div class="form-group">
+                    <label for="courriel">Courriel</label>
+                    <input type="email" class="form-control" id="courriel" aria-describedby="emailHelp" placeholder="Entrer votre courriel">
+                </div>
+                <div class="form-group">
+                    <label for="mot-de-passe">mot de passe</label>
+                    <input type="password" class="form-control" id="mot-de-passe" placeholder="Entrer votre mot de passe">
+                </div>
+                <input type="button" class="btn btn-primary" value="Connexion" onclick="versCommande()" />
+            </form>
+            <!--
+            <form method="post" >
+                <fieldset id="#renseignement-auth">
+                    <div class="group">
+                        <label for="courriel"> Courriel</label>
+                        <input type="email" name="courriel" id="courriel" required/>
+                    </div>
+                    <div class="group">
+                        <label for="mot-de-passe">Mot de passe</label>
+                        <input type="password" name="mot-de-passe" id="mot-de-passe" required/>
+                    </div>
+                </fieldset>
+                <div class="group submit-group">
+                    <input type="button" class="btn btn-primary" value="Connexion" onclick="versCommande()" />
+                </div>
+            </form>
+            -->
+        </div>
+    </div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-5">
+        <form class="needs-validation" novalidate>
+            <div class="form-row">
+                <div class="col-md-4 mb-3">
+                    <label for="validationCustom01">First name</label>
+                    <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Mark" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="validationCustom02">Last name</label>
+                    <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="validationCustomUsername">Username</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroupPrepend">@</span>
+                        </div>
+                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                        <div class="invalid-feedback">
+                            Please choose a username.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="validationCustom03">City</label>
+                    <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
+                    <div class="invalid-feedback">
+                        Please provide a valid city.
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="validationCustom04">State</label>
+                    <input type="text" class="form-control" id="validationCustom04" placeholder="State" required>
+                    <div class="invalid-feedback">
+                        Please provide a valid state.
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="validationCustom05">Zip</label>
+                    <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required>
+                    <div class="invalid-feedback">
+                        Please provide a valid zip.
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                    <label class="form-check-label" for="invalidCheck">
+                        Agree to terms and conditions
+                    </label>
+                    <div class="invalid-feedback">
+                        You must agree before submitting.
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-primary" type="submit">Submit form</button>
+        </form>
+    </div>
+</div>
+
 </body>
 </html>
