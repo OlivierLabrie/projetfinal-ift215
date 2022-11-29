@@ -6,14 +6,24 @@ let TOKEN_CLIENT = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZENsaWVudCI6MSwicm9
 let itemGlobal;
 
 function chargerproduits(){
+    let urlToCall = "/produits";
+    let text = $('#search_produit').val();
+    if (text) {
+        urlToCall = "/produits?nom=" + text;
+    }
+    $('#list_items').empty();
     $.ajax({
-        url: "/produits",
+        url: urlToCall,
         success: function( result ) {
-            $.each(result, function (key, value) {
-                item = item_to_html(value);
-                $('#list_items').append(item);
-            });
-
+            if (result.length == 0) {
+                $('#list_items').append('<h4 class="text-center">Aucun résultat trouvé</h4>');
+            }
+            else {
+                $.each(result, function (key, value) {
+                    item = item_to_html(value);
+                    $('#list_items').append(item);
+                });
+            }
             set_panier();
         }
     });
@@ -229,3 +239,4 @@ function chargerTotal(){
 function confirmation(){
     window.location.replace('#/confirmationcommande');
 }
+
