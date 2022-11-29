@@ -5,7 +5,7 @@
         "nom": "Banane",
         "description": "Banane jaune",
         "prix": 0.79,
-        "qte_inventaire": 9,
+        "qte_inventaire": 15,
         "categorie": {
             "id": 1,
             "nom": "Nutrition",
@@ -18,7 +18,7 @@
         "nom": "Tomate",
         "description": "Tomate de serre",
         "prix": 3.34,
-        "qte_inventaire": 8,
+        "qte_inventaire": 14,
         "categorie": {
             "id": 1,
             "nom": "Nutrition",
@@ -31,7 +31,7 @@
         "nom": "Concombre",
         "description": "Cucurbitaceae de forme cylindrique",
         "prix": 2.23,
-        "qte_inventaire": 8,
+        "qte_inventaire": 19,
         "categorie": {
             "id": 1,
             "nom": "Nutrition",
@@ -44,7 +44,7 @@
         "nom": "Poids",
         "description": "Poids et haltère de grande qualité",
         "prix": 123.45,
-        "qte_inventaire": 8,
+        "qte_inventaire": 7,
         "categorie": {
             "id": 2,
             "nom": "Poids",
@@ -57,7 +57,7 @@
         "nom": "Coupe-Vent",
         "description": "Pour fendre le vent",
         "prix": 450,
-        "qte_inventaire": 8,
+        "qte_inventaire": 7,
         "categorie": {
             "id": 3,
             "nom": "Vetement",
@@ -70,7 +70,7 @@
         "nom": "Shake",
         "description": "Shake avec un arrière goût de métal",
         "prix": 15.55,
-        "qte_inventaire": 6,
+        "qte_inventaire": 3,
         "categorie": {
             "id": 4,
             "nom": "Supplement",
@@ -83,7 +83,7 @@
         "nom": "Meilleur_plan",
         "description": "Un plan de grande qualité",
         "prix": 325,
-        "qte_inventaire": 7,
+        "qte_inventaire": 4,
         "categorie": {
             "id": 5,
             "nom": "Autre",
@@ -96,7 +96,7 @@
         "nom": "Roche",
         "description": "Une roche avec un potentiel infini pour les propriétés.  Peut-être aussi que ce n'est qu'une roche",
         "prix": 1500.23,
-        "qte_inventaire": 8,
+        "qte_inventaire": 7,
         "categorie": {
             "id": 6,
             "nom": "Nutrition",

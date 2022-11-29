@@ -128,10 +128,8 @@ function updateStatus(idVente) {
             xhr.setRequestHeader('Authorization', "Basic "+ TOKEN_ADMIN);
         },
         success: function( result ) {
-            resolve(result);
         },
         error: function (err) {
-            reject(err);
         }
     });
 }

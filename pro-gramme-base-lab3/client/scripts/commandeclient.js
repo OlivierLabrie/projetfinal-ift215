@@ -53,6 +53,13 @@ function delete_vente() {
         },
         success: function(result) {
             $('#succesSuppressionModal').modal('toggle');
+            setTimeout(function() {
+                $('#succesSuppressionModal').modal('hide');
+                let url = new URL(window.location.href.replace(/#/g,""));
+                if (url.pathname == "//commandeclient") {
+                    window.location.replace("#/commandes");
+                }
+            }, 2500);
         },
         error: function(result) {
             $('#erreurSuppressionModal').modal('toggle');

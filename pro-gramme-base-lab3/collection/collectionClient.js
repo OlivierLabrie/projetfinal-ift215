@@ -235,7 +235,7 @@ class CollectionClient {
    * @returns {number}
    */
   getClientIndex(idClient) {
-    return this.liste_clients.findIndex(obj => obj.id === idClient);
+    return this.liste_clients.findIndex(obj => obj.id == idClient);
   }
 
   /**

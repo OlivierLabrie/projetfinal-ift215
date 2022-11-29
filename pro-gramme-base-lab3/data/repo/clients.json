@@ -9,172 +9,14 @@
         "courriel": "aaa@bbb.com",
         "mdp": "$2b$08$CEfAuisfWI/driqC4REyfOo/y8RG0g1dw7ngClRLBk1QANEs.U53u",
         "panier": {
-            "valeur": 129.02,
-            "items": [
-                {
-                    "id": 0,
-                    "idProduit": 3,
-                    "nomProduit": "Poids",
-                    "descriptionProduit": "Poids et haltère de grande qualité",
-                    "prix": 123.45,
-                    "quantite": 1
-                },
-                {
-                    "id": 1,
-                    "idProduit": 2,
-                    "nomProduit": "Concombre",
-                    "descriptionProduit": "Cucurbitaceae de forme cylindrique",
-                    "prix": 2.23,
-                    "quantite": 1
-                },
-                {
-                    "id": 2,
-                    "idProduit": 1,
-                    "nomProduit": "Tomate",
-                    "descriptionProduit": "Tomate de serre",
-                    "prix": 3.34,
-                    "quantite": 1
-                }
-            ]
+            "valeur": 0,
+            "items": []
         },
         "historique": [
             {
-                "id": 0,
-                "idClient": 1,
-                "montant": 99.04,
-                "produits": [
-                    {
-                        "id": 0,
-                        "idProduit": 1,
-                        "nomProduit": "Tomate",
-                        "descriptionProduit": "Un poirier est une espèce d'arbre qui offre de bons suppléments",
-                        "prix": 24.76,
-                        "quantite": 4
-                    }
-                ],
-                "status": "prepare",
-                "date": "2021-11-13T21:44:38.858Z"
-            },
-            {
                 "id": -1,
                 "idClient": "1",
-                "montant": 26.990000000000002,
-                "produits": [
-                    {
-                        "id": 0,
-                        "idProduit": 1,
-                        "nomProduit": "Tomate",
-                        "descriptionProduit": "Tomate de serre",
-                        "prix": 24.76,
-                        "quantite": 1
-                    },
-                    {
-                        "id": 1,
-                        "idProduit": 2,
-                        "nomProduit": "Concombre",
-                        "descriptionProduit": "Cucurbitaceae de forme cylindrique",
-                        "prix": 2.23,
-                        "quantite": 1
-                    }
-                ],
-                "status": "reçue",
-                "date": "2022-11-27T20:48:28.850Z"
-            },
-            {
-                "id": -1,
-                "idClient": "1",
-                "montant": 4.46,
-                "produits": [
-                    {
-                        "id": 0,
-                        "idProduit": 5,
-                        "nomProduit": "Shake de protéine",
-                        "descriptionProduit": "Shake avec un arrière goût de métal",
-                        "prix": 2.23,
-                        "quantite": 1
-                    },
-                    {
-                        "id": 1,
-                        "idProduit": 6,
-                        "nomProduit": "Meilleur plan",
-                        "descriptionProduit": "Un plan de grande qualité",
-                        "prix": 2.23,
-                        "quantite": 1
-                    }
-                ],
-                "status": "reçue",
-                "date": "2022-11-27T20:59:48.803Z"
-            },
-            {
-                "id": -1,
-                "idClient": "1",
-                "montant": 6.6899999999999995,
-                "produits": [
-                    {
-                        "id": 0,
-                        "idProduit": 5,
-                        "nomProduit": "Shake de protéine",
-                        "descriptionProduit": "Shake avec un arrière goût de métal",
-                        "prix": 2.23,
-                        "quantite": 1
-                    },
-                    {
-                        "id": 1,
-                        "idProduit": 6,
-                        "nomProduit": "Meilleur plan",
-                        "descriptionProduit": "Un plan de grande qualité",
-                        "prix": 2.23,
-                        "quantite": 1
-                    },
-                    {
-                        "id": 2,
-                        "idProduit": 7,
-                        "nomProduit": "roche",
-                        "descriptionProduit": "Une roche avec un potentiel infini pour les propriétés.  Peut-être aussi que ce n'est qu'une roche",
-                        "prix": 2.23,
-                        "quantite": 1
-                    }
-                ],
-                "status": "reçue",
-                "date": "2022-11-27T21:10:32.106Z"
-            },
-            {
-                "id": -1,
-                "idClient": "1",
-                "montant": 126.03000000000002,
-                "produits": [
-                    {
-                        "id": 1,
-                        "idProduit": 1,
-                        "nomProduit": "Tomate",
-                        "descriptionProduit": "Un poirier est une espèce d'arbre qui offre de bons suppléments",
-                        "prix": 24.76,
-                        "quantite": 3
-                    },
-                    {
-                        "id": 3,
-                        "idProduit": 0,
-                        "nomProduit": "Banane",
-                        "descriptionProduit": "Un poirier est une espèce d'arbre qui offre de bons suppléments",
-                        "prix": 24.76,
-                        "quantite": 2
-                    },
-                    {
-                        "id": 4,
-                        "idProduit": 2,
-                        "nomProduit": "Concombre",
-                        "descriptionProduit": "pas un jouet",
-                        "prix": 2.23,
-                        "quantite": 1
-                    }
-                ],
-                "status": "reçue",
-                "date": "2022-11-27T21:50:43.722Z"
-            },
-            {
-                "id": 12,
-                "idClient": "1",
-                "montant": 622.82,
+                "montant": 123.45,
                 "produits": [
                     {
                         "id": 0,
@@ -182,18 +24,53 @@
                         "nomProduit": "Poids",
                         "descriptionProduit": "Poids et haltère de grande qualité",
                         "prix": 123.45,
-                        "quantite": 5
-                    },
+                        "quantite": 1
+                    }
+                ],
+                "status": "recue",
+                "date": "2022-11-29T16:46:17.862Z"
+            },
+            {
+                "id": -1,
+                "idClient": "1",
+                "montant": 2.37,
+                "produits": [
                     {
-                        "id": 1,
+                        "id": 0,
+                        "idProduit": 0,
+                        "nomProduit": "Banane",
+                        "descriptionProduit": "Banane jaune",
+                        "prix": 0.79,
+                        "quantite": 3
+                    }
+                ],
+                "status": "recue",
+                "date": "2022-11-29T16:46:40.427Z"
+            },
+            {
+                "id": -1,
+                "idClient": "1",
+                "montant": 2.23,
+                "produits": [
+                    {
+                        "id": 0,
                         "idProduit": 2,
                         "nomProduit": "Concombre",
                         "descriptionProduit": "Cucurbitaceae de forme cylindrique",
                         "prix": 2.23,
                         "quantite": 1
-                    },
+                    }
+                ],
+                "status": "recue",
+                "date": "2022-11-29T16:48:03.743Z"
+            },
+            {
+                "id": -1,
+                "idClient": "1",
+                "montant": 3.34,
+                "produits": [
                     {
-                        "id": 2,
+                        "id": 0,
                         "idProduit": 1,
                         "nomProduit": "Tomate",
                         "descriptionProduit": "Tomate de serre",
@@ -201,8 +78,59 @@
                         "quantite": 1
                     }
                 ],
-                "status": "reçue",
-                "date": "2022-11-27T22:24:44.826Z"
+                "status": "recue",
+                "date": "2022-11-29T16:48:39.568Z"
+            },
+            {
+                "id": -1,
+                "idClient": "1",
+                "montant": 3.34,
+                "produits": [
+                    {
+                        "id": 0,
+                        "idProduit": 1,
+                        "nomProduit": "Tomate",
+                        "descriptionProduit": "Tomate de serre",
+                        "prix": 3.34,
+                        "quantite": 1
+                    }
+                ],
+                "status": "recue",
+                "date": "2022-11-29T16:49:28.326Z"
+            },
+            {
+                "id": -1,
+                "idClient": "1",
+                "montant": 3.34,
+                "produits": [
+                    {
+                        "id": 0,
+                        "idProduit": 1,
+                        "nomProduit": "Tomate",
+                        "descriptionProduit": "Tomate de serre",
+                        "prix": 3.34,
+                        "quantite": 1
+                    }
+                ],
+                "status": "recue",
+                "date": "2022-11-29T16:50:52.591Z"
+            },
+            {
+                "id": -1,
+                "idClient": "1",
+                "montant": 3.34,
+                "produits": [
+                    {
+                        "id": 0,
+                        "idProduit": 1,
+                        "nomProduit": "Tomate",
+                        "descriptionProduit": "Tomate de serre",
+                        "prix": 3.34,
+                        "quantite": 1
+                    }
+                ],
+                "status": "recue",
+                "date": "2022-11-29T16:51:12.228Z"
             }
         ]
     },

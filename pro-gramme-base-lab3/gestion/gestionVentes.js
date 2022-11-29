@@ -25,6 +25,15 @@ class GestionVentes {
     if (vente) {
       if (vente.status === Object.keys(this.statusPossibles).find(key => this.statusPossibles[key] == 'reçue')) {
         this.collectionVente.effacerVente(vente);
+
+        let client = this.collectionClient.liste_clients.find(x => x.id == vente.idClient)
+        let v = client.historique.splice(client.historique.findIndex(x => x.id === vente.id), 1);
+        v[0].id = -1;
+        console.log(v);
+        client.historique.push(v[0]);
+        console.log(client.historique);
+        this.collectionClient.sauvegarder();
+
         for (const i in vente.produits) {
           const itemPanier = vente.produits[i];
           this.collectionProduit.ajusterQuantite({ id: itemPanier.idProduit }, itemPanier.quantite);
@@ -45,14 +54,12 @@ class GestionVentes {
    */
   ajouterVente(req, res) {
     const idClient = req.body.idClient;
-    console.log(idClient);
     const client = this.collectionClient.recupereClient(1);
-    console.log(client);
     if (client) {
       if (client.panier.valeur > 0) {
-        const vente = new Vente(-1, idClient, client.panier.valeur, client.panier.items, this.statusPossibles.recue, new Date());
-        this.collectionClient.acheterPanier(client, vente);
+        const vente = new Vente(-1, idClient, client.panier.valeur, client.panier.items, "recue", new Date());
         this.collectionVente.ajouterVente(vente);
+        this.collectionClient.acheterPanier(client, vente);
         res.send(vente);
       } else {
         res.status(400).send(`Le client ${idClient} n'a pas de panier actif`);
