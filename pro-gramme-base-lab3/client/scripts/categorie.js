@@ -8,11 +8,7 @@ function chargercategorie(){
         method: 'GET',
         success: function( result ) {
             $.each(result, function (key, value) {
-                console.log('Value: ' + value.id)
-                console.log('Categorie:' + categorie)
                 if(value.id == categorie){
-                    console.log("Dans IF")
-
                     chargerproduitscategories();
                 }
             });
