@@ -25,24 +25,25 @@ function attacherListenerMenuGauche(){
 function versCommande(){
     let COURRIEL = document.getElementById("courriel").value;
     let MDP =document.getElementById("mot-de-passe").value;
-    console.log(COURRIEL);
+
     $.ajax({
         url: "/connexion/" + ID_CLIENT,
         method:"POST",
         data:JSON.stringify({"courriel":COURRIEL,"mdp":MDP}),
         contentType: "application/json",
         success: function(result){
+            TOKEN_CLIENT = result.token;
+            TOKEN_ADMIN = result.token;
+            ID_CLIENT = result.idClient;
+
             if(result.role === 'admin'){
-                console.log('Admin');
                 window.location.replace('#/commandes')
             }
             else{
-                console.log('pas admin');
                 window.location.replace('#/')
             }
         },
         error: function (result) {
-            console.log(result);
             window.location.replace('#/');
         }
     });
