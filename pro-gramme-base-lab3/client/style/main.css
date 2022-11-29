@@ -312,31 +312,66 @@ dl {
     margin-top: 30px;
 }
 
+/*section connexion*/
 
-
-#connexion{
+.connexion{
     position: relative;
     left: 30px;
     border: 4px solid #F20505;
-    width:20%;
-    margin-left: 250px;
+    width:80%;
+    margin-left: 70px;
     margin-top: 50px;
     text-align: center;
-    font-size: x-large;
-    float:left;
+
 }
 
-#logo-connexion{
+.logo-connexion{
     position: relative;
-    margin-left:830px;
-    margin-top: 20px;
-    margin-bottom: 75px;
-
+    width: 60%;
+    margin-left:40%;
 }
 
 .button_vers_accueil{
-    margin-left:280px;
+    margin-left:100px;
     margin-top:30px;
+}
+
+.sectionInput{
+    width: 80%;
+    margin-left: 100px;
+
+}
+
+.button-connexion{
+    margin-top:30px;
+}
+
+/*section registre*/
+
+.registre{
+    position: relative;
+    left: 30px;
+    border: 4px solid #F20505;
+    width:50%;
+    margin-left: 70px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.form-row{
+    width: 88%;
+    margin-left: 12%;
+}
+
+.button_inscription{
+    width: 88%;
+    margin-left: 12%;
+    margin-top: 30px;
+}
+
+.col-md-4 mb-3{
+    width: 100%;
+
 }
 
 

@@ -43,6 +43,7 @@ function versCommande(){
         },
         error: function (result) {
             console.log(result);
+            window.location.replace('#/');
         }
     });
 }
