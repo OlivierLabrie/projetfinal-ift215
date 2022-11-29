@@ -9,8 +9,25 @@
         "courriel": "aaa@bbb.com",
         "mdp": "$2b$08$CEfAuisfWI/driqC4REyfOo/y8RG0g1dw7ngClRLBk1QANEs.U53u",
         "panier": {
-            "valeur": 0,
-            "items": []
+            "valeur": 11.14,
+            "items": [
+                {
+                    "id": 0,
+                    "idProduit": 2,
+                    "nomProduit": "Concombre",
+                    "descriptionProduit": "Cucurbitaceae de forme cylindrique",
+                    "prix": 2.23,
+                    "quantite": 2
+                },
+                {
+                    "id": 1,
+                    "idProduit": 1,
+                    "nomProduit": "Tomate",
+                    "descriptionProduit": "Tomate de serre",
+                    "prix": 3.34,
+                    "quantite": 2
+                }
+            ]
         },
         "historique": [
             {
@@ -238,7 +255,7 @@
                 "date": "2022-11-29T16:13:45.012Z"
             },
             {
-                "id": -1,
+                "id": 15,
                 "idClient": "1",
                 "montant": 129.02,
                 "produits": [

@@ -35,36 +35,42 @@
   </div>
 </section>
 
-<div class="bas_page">
-  <hr>
-  <div class="premiere_ligne">
-    <dl class="cout_commande">
-      <dt>Coût de la commande</dt>
-      <dt>+ taxes</dt>
-      <dt>+ livraison</dt>
-    </dl>
-    <dl class="prix">
-      <dt id="prixTOT">Coût total</dt>
-      <dt id="taxes">Taxes</dt>
-      <dt id="livraison">15 $</dt>
-    </dl>
+<div class="row>">
+  <div class="col-10">
+    <div class="bas_page">
+      <hr>
+      <div class="premiere_ligne">
+        <dl class="cout_commande">
+          <dt>Coût de la commande</dt>
+          <dt>+ taxes</dt>
+          <dt>+ livraison</dt>
+        </dl>
+        <dl class="prix">
+          <dt id="prixTOT">Coût total</dt>
+          <dt id="taxes">Taxes</dt>
+          <dt id="livraison">15 $</dt>
+        </dl>
+      </div>
+      <hr>
+      <div class="deuxieme_ligne">
+        <dl class="cout_commande">
+          <dt class="total">Total</dt>
+          <dt>Date de livraison estimée</dt>
+        </dl>
+        <dl>
+          <dt class="prix_total" id="grandtotal">Prix total</dt>
+          <dt class="date">DD/MM/YYYY</dt>
+        </dl>
+      </div>
+      <hr>
+      <div class="buttonConfirmation">
+        <button type="button" class="btn btn-secondary" onclick="$('#supprimerCommandeModal').modal('show')">Transformer Panier en Vente</button>
+      </div>
+    </div>
   </div>
-  <hr>
-  <div class="deuxieme_ligne">
-    <dl class="cout_commande">
-      <dt class="total">Total</dt>
-      <dt>Date de livraison estimée</dt>
-    </dl>
-    <dl>
-      <dt class="prix_total" id="grandtotal">Prix total</dt>
-      <dt class="date">DD/MM/YYYY</dt>
-    </dl>
-  </div>
-  <hr>
-  <div class="buttonConfirmation">
-    <button type="button" class="btn btn-secondary" onclick="$('#supprimerCommandeModal').modal('show')">Transformer Panier en Vente</button>
-  </div>
+
 </div>
+
 
 
 <!--Pop up quand on veut confirmer la commande-->
