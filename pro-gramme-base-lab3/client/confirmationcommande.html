@@ -5,8 +5,12 @@
     <title>Title</title>
 </head>
 <body>
+<div class="button_retour">
+  <button type="button" class="btn btn-secondary" onclick="retourPanier()">
+    <i class="bi bi-caret-left-fill"></i>Retour au panier
+  </button>
+</div>
 
-<button class="button_retour" onclick="retourPanier()">Retour au panier</button>
 <div class="confirmation_commande">
   <h1>Veuillez confimer votre commande</h1>
   <hr>
@@ -57,8 +61,8 @@
     </dl>
   </div>
   <hr>
-  <div>
-    <button class="buttonConfirmation" onclick="$('#supprimerCommandeModal').modal('show')">Transformer Panier en Vente</button>
+  <div class="buttonConfirmation">
+    <button type="button" class="btn btn-secondary" onclick="$('#supprimerCommandeModal').modal('show')">Transformer Panier en Vente</button>
   </div>
 </div>
 

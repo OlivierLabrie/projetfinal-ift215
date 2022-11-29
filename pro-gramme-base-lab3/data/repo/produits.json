@@ -18,7 +18,7 @@
         "nom": "Tomate",
         "description": "Tomate de serre",
         "prix": 3.34,
-        "qte_inventaire": 9,
+        "qte_inventaire": 8,
         "categorie": {
             "id": 1,
             "nom": "Nutrition",
@@ -31,7 +31,7 @@
         "nom": "Concombre",
         "description": "Cucurbitaceae de forme cylindrique",
         "prix": 2.23,
-        "qte_inventaire": 9,
+        "qte_inventaire": 8,
         "categorie": {
             "id": 1,
             "nom": "Nutrition",
@@ -44,7 +44,7 @@
         "nom": "Poids",
         "description": "Poids et haltère de grande qualité",
         "prix": 123.45,
-        "qte_inventaire": 9,
+        "qte_inventaire": 8,
         "categorie": {
             "id": 2,
             "nom": "Poids",
