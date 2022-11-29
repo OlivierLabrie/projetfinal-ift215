@@ -3,6 +3,7 @@
 //const {gClients} = require("../../util/gestionnaires");
 let ID_CLIENT = 1;
 let TOKEN_CLIENT = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZENsaWVudCI6MSwicm9sZSI6ImNsaWVudCIsImlhdCI6MTYzNjc1MjI1MywiZXhwIjoxODM2NzUyMjUzfQ.qMcKC0NeuVseNSeGtyaxUvadutNAfzxlhL5LYPsRB8k";
+let itemGlobal;
 
 function chargerproduits(){
     $.ajax({
@@ -115,11 +116,11 @@ function remove_item(item) {
         success: function( result ) {
 
             chargerpanier();
-            $('#succesSuppressionModal').modal('toggle');
+            $('#successSuppressionItemModal').modal('toggle');
         },
         error : function (result){
             console.log("erreur");
-            $('#erreurSuppressionModal').modal('toggle');
+            $('#erreurSuppressionItemModal').modal('toggle');
         }
     });
 }
@@ -164,10 +165,15 @@ function load_panier(item) {
     qte = $('<td><button onclick="ajouterItem('+ item.id + ')">+</button><button onclick="enleverItem('+ item.id + ')">-</button>             </td>').append(item.quantite);
     total = $('<td></td>').append(Math.round(item.quantite * item.prix * 100) / 100);
     trash = $('<td></td>')
-        .append('<button type="button" class="btn" onClick="remove_item([' + item.id + '])"><span class="bi bi-trash" aria-hidden="true"></span></button>')
+        .append('<button type="button" class="btn" onClick="setItemGlobal([' + item.id + '])"><span class="bi bi-trash" aria-hidden="true"></span></button>')
 
 
     return $('<tr style = "border: 4px solid #666DF2"></tr>').append(image).append(nom).append(prix).append(qte).append(total).append(trash);
+}
+
+function setItemGlobal(item) {
+    itemGlobal = item;
+    $('#supprimerItemModal').modal('show');
 }
 
 function chargerTotal(){
