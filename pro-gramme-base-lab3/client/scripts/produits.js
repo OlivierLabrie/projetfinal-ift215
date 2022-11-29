@@ -115,6 +115,11 @@ function remove_item(item) {
         success: function( result ) {
 
             chargerpanier();
+            $('#succesSuppressionModal').modal('toggle');
+        },
+        error : function (result){
+            console.log("erreur");
+            $('#erreurSuppressionModal').modal('toggle');
         }
     });
 }

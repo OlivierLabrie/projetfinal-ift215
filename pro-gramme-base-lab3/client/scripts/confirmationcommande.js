@@ -110,11 +110,11 @@ function vente(){
             calculerGrandTotal();
             prixLivraison = 0;
             console.log("Successs ")
-            $('#succesSuppressionModal').modal('toggle');
+            $('#successConfirmationModal').modal('toggle');
         },
         error : function (result){
             console.log("erreur");
-            $('#erreurSuppressionModal').modal('toggle');
+            $('#erreurConfirmationModal').modal('toggle');
         }
     })
 }

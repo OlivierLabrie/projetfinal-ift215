@@ -381,5 +381,22 @@
         ],
         "status": "reçue",
         "date": "2022-11-29T16:14:35.308Z"
+    },
+    {
+        "id": 16,
+        "idClient": "1",
+        "montant": 3.34,
+        "produits": [
+            {
+                "id": 1,
+                "idProduit": 1,
+                "nomProduit": "Tomate",
+                "descriptionProduit": "Tomate de serre",
+                "prix": 3.34,
+                "quantite": 1
+            }
+        ],
+        "status": "reçue",
+        "date": "2022-11-29T17:00:27.429Z"
     }
 ]

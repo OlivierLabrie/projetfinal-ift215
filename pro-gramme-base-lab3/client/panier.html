@@ -34,10 +34,57 @@
 </section>
 
 
+<!--Pop up quand on veut supprimer un item du panier-->
+<div class="modal" tabindex="-1" role="dialog" id="supprimerCommandeModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Suppression de l'item</h5>
+                <button type="button" data-bs-dismiss="modal" aria-label="Close" style="border: none !important">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Êtes-vous certain de vouloir supprimer cet item du panier?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" onclick="$('#supprimerCommandeModal').modal('toggle'); remove_item()">Confirmer</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+            </div>
+        </div>
+    </div>
+</div>
 
+<!--Pop up quand l'item est bien supprimé-->
+<div class="modal" tabindex="-1" role="dialog" id="succesSuppressionModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Item supprimé avec succès!</h5>
+                <button type="button" data-bs-dismiss="modal" aria-label="Close" style="border: none !important">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>
 
-
-</section>
+<!--Pop up quand l'item n'est pas supprimé-->
+<div class="modal" tabindex="-1" role="dialog" id="erreurSuppressionModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">L'item n'a pas été supprimé du panier</h5>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 </body>

@@ -64,7 +64,7 @@
       </div>
       <hr>
       <div class="buttonConfirmation">
-        <button type="button" class="btn btn-secondary" onclick="$('#supprimerCommandeModal').modal('show')">Transformer Panier en Vente</button>
+        <button type="button" class="btn btn-secondary" onclick="$('#confirmerCommandeModal').modal('show')">Transformer Panier en Vente</button>
       </div>
     </div>
   </div>
@@ -74,7 +74,7 @@
 
 
 <!--Pop up quand on veut confirmer la commande-->
-<div class="modal" tabindex="-1" role="dialog" id="supprimerCommandeModal">
+<div class="modal" tabindex="-1" role="dialog" id="confirmerCommandeModal">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -88,7 +88,7 @@
         <p style="color: darkred"><strong>(Cette action est irréversible)</strong></p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-danger" onclick="$('#supprimerCommandeModal').modal('toggle'); vente()">Confirmer</button>
+        <button type="button" class="btn btn-danger" onclick="$('#confirmerCommandeModal').modal('toggle'); vente()">Confirmer</button>
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
       </div>
     </div>
@@ -96,7 +96,7 @@
 </div>
 
 <!--Pop up quand la commande est belle et bien confirmé-->
-<div class="modal" tabindex="-1" role="dialog" id="succesSuppressionModal">
+<div class="modal" tabindex="-1" role="dialog" id="successConfirmationModal">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -113,7 +113,7 @@
 </div>
 
 <!--Pop up quand la commande n'est pas confirmé-->
-<div class="modal" tabindex="-1" role="dialog" id="erreurSuppressionModal">
+<div class="modal" tabindex="-1" role="dialog" id="erreurConfirmationModal">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
