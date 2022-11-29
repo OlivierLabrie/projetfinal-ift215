@@ -20,3 +20,23 @@
 <div class="row" id="list_items">
 </div>
 </section>
+
+<!--Pop up quand le produit n'est plus disponible en inventaire-->
+<div class="modal" tabindex="-1" role="dialog" id="inventaireVide">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Erreur</h5>
+                <button type="button" data-bs-dismiss="modal" aria-label="Close" style="border: none !important">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Ce produit est en rupture de stock pour le moment.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>

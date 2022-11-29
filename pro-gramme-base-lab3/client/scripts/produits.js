@@ -91,7 +91,6 @@ function item_to_html(item){
 
 function add_item(item) {
     let id_item = item[0];
-
     $.ajax({
         url: "/clients/"+ID_CLIENT+"/panier",
         method:"POST",
@@ -101,7 +100,12 @@ function add_item(item) {
         },
         success: function( result ) {
             $('#item_counter').text(result.items.length);
-        }
+        },
+        statusCode: {
+            400: function() {
+                $('#inventaireVide').modal('show');
+            }
+        },
     });
 }
 

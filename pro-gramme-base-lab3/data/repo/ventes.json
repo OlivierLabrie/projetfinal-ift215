@@ -1,1 +1,92 @@
-[]
+[
+    {
+        "id": 0,
+        "idClient": "1",
+        "montant": 0.79,
+        "produits": [
+            {
+                "id": 0,
+                "idProduit": 0,
+                "nomProduit": "Banane",
+                "descriptionProduit": "Banane jaune",
+                "prix": 0.79,
+                "quantite": 1
+            }
+        ],
+        "status": "recue",
+        "date": "2022-11-29T18:56:50.475Z"
+    },
+    {
+        "id": 1,
+        "idClient": "1",
+        "montant": 2423.9300000000003,
+        "produits": [
+            {
+                "id": 0,
+                "idProduit": 1,
+                "nomProduit": "Tomate",
+                "descriptionProduit": "Tomate de serre",
+                "prix": 3.34,
+                "quantite": 2
+            },
+            {
+                "id": 1,
+                "idProduit": 0,
+                "nomProduit": "Banane",
+                "descriptionProduit": "Banane jaune",
+                "prix": 0.79,
+                "quantite": 1
+            },
+            {
+                "id": 2,
+                "idProduit": 2,
+                "nomProduit": "Concombre",
+                "descriptionProduit": "Cucurbitaceae de forme cylindrique",
+                "prix": 2.23,
+                "quantite": 1
+            },
+            {
+                "id": 3,
+                "idProduit": 3,
+                "nomProduit": "Poids",
+                "descriptionProduit": "Poids et haltère de grande qualité",
+                "prix": 123.45,
+                "quantite": 1
+            },
+            {
+                "id": 4,
+                "idProduit": 7,
+                "nomProduit": "Roche",
+                "descriptionProduit": "Une roche avec un potentiel infini pour les propriétés.  Peut-être aussi que ce n'est qu'une roche",
+                "prix": 1500.23,
+                "quantite": 1
+            },
+            {
+                "id": 5,
+                "idProduit": 6,
+                "nomProduit": "Meilleur_plan",
+                "descriptionProduit": "Un plan de grande qualité",
+                "prix": 325,
+                "quantite": 1
+            },
+            {
+                "id": 6,
+                "idProduit": 5,
+                "nomProduit": "Shake",
+                "descriptionProduit": "Shake avec un arrière goût de métal",
+                "prix": 15.55,
+                "quantite": 1
+            },
+            {
+                "id": 7,
+                "idProduit": 4,
+                "nomProduit": "Coupe-Vent",
+                "descriptionProduit": "Pour fendre le vent",
+                "prix": 450,
+                "quantite": 1
+            }
+        ],
+        "status": "recue",
+        "date": "2022-11-29T19:01:46.744Z"
+    }
+]
