@@ -3,7 +3,8 @@ let categorie;
 function chargercategorie(){
     getCategorie();
     $.ajax({
-        url: "/categorie",
+        url: "/categories/",
+        method: 'GET',
         success: function( result ) {
             $.each(result, function (key, value) {
                 if(value.categorie.id === categorie){

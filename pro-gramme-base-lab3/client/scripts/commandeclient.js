@@ -59,7 +59,7 @@ function delete_vente() {
                 if (url.pathname == "//commandeclient") {
                     window.location.replace("#/commandes");
                 }
-            }, 2500);
+            }, 2000);
         },
         error: function(result) {
             $('#erreurSuppressionModal').modal('toggle');
