@@ -8,10 +8,9 @@
 <section class="mt-2 container">
     <div class="row" id="liste_panier">
         <i className="bi bi-trash"></i>
-
-        <table >
+        <table class="table" id="table_panier">
             <thead>
-                <tr class="table"  >
+                <tr>
                     <th></th>
                     <th>Nom</th>
                     <th>Prix</th>
@@ -26,10 +25,10 @@
         </table>
     </div>
     <div>
-        <h2 class="prixTot" id="prixTOT">Total testtest</h2> <!-- prix total -->
+        <h2 class="prixTot" id="prixTOT"></h2> <!-- prix total -->
     </div>
     <div class="buttonConfirmation">
-        <button type="button" class="btn btn-secondary" id="buttonConfirmer" onclick="confirmation()"></button>
+        <button type="button" class="btn btn-secondary" id="buttonConfirmer" onclick="confirmation()">Confirmer la commande</button>
 
     </div>
 </section>

@@ -18,7 +18,7 @@
         "nom": "Tomate",
         "description": "Tomate de serre",
         "prix": 3.34,
-        "qte_inventaire": 11,
+        "qte_inventaire": 12,
         "categorie": {
             "id": 1,
             "nom": "Nutrition",

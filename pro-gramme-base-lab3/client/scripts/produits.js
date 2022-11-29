@@ -28,11 +28,17 @@ function chargerpanier(){
         },
         success: function( result ) {
             $('#body_table').empty();
+            console.log(result);
+            if (result.items.length == 0) {
+                $('#table_panier').addClass('hidden');
+                $('#buttonConfirmer').addClass('hidden');
+                $('#liste_panier').append('<h4 class="text-center">Votre panier est présentement vide</h4>');
+                $('#prixTOT').text('');
+            }
             $.each(result.items, function (key, value) {
                 item = load_panier(value);
                 $('#body_table').append(item);
                 chargerTotal();
-
             });
         }
     });
@@ -211,7 +217,7 @@ function chargerTotal(){
         },
         success: function( result){
             $('#prixTOT').text('Total de la commande : '+ Math.round(result.valeur * 100) / 100 + ' $');
-            $('#buttonConfirmer').text('Confirmer la commande');
+            // $('#buttonConfirmer').text('Confirmer la commande');
             for( let i in result.items){
                 item = item_to_html(result.items[i])
                 $('#list_panier').append(item);
