@@ -28,7 +28,6 @@ function chargerpanier(){
         },
         success: function( result ) {
             $('#body_table').empty();
-            console.log(result);
             $.each(result.items, function (key, value) {
                 item = load_panier(value);
                 $('#body_table').append(item);
@@ -59,19 +58,21 @@ function item_to_html(item){
     item_head = $('<div</div>')
         .addClass('card-header py-3')
         .append('<h4 class="my-0 fw-normal">' + item.nom + '</h4>');
-    item_detail = $('<ul></ul>')
-        .addClass('list-unstyled mt-3 mb-4')
-        .append('<li>Categorie. :' + item.categorie.nom +'</li>');
+
     item_body = $('<div></div>')
         .addClass('card-body')
         .append(' <h1 class="card-title text-center"> $' + item.prix +'</h1>');
 
     description = $('<div></div>')
         .addClass('list-unstyled mt-3 mb-4')
-        .append('<li>Qte dispo:' + item.qte_inventaire + '</li>')
-        .append('<li>Catégorie:' + item.categorie.nom + '</li>')
+        .append('<li>Qte dispo:' + item.qte_inventaire + '</li>');
+    if (item.categorie) {
+        description.append('<li>Catégorie:' + item.categorie.nom + '</li>');
+    }
+    description
         .append('<br />')
-        .append('<li>' + item.description + '</li>')
+        .append('<li>' + item.description + '</li>');
+
     cart = $('<p class="w-100 display-6 text-center">\n' +
         ' <button type="button" class="btn btn-primary position-relative" onclick="add_item(['+item.id+'])">\n' +
         ' <i class="bi bi-cart-plus"></i>\n' +
@@ -111,6 +112,7 @@ function add_item(item) {
 
 function remove_item(item) {
     let id_item = item[0];
+
     $.ajax({
         url: "/clients/"+ID_CLIENT+"/panier/" + id_item,
         method:"DELETE",
@@ -118,19 +120,16 @@ function remove_item(item) {
             xhr.setRequestHeader('Authorization', "Basic "+ TOKEN_CLIENT);
         },
         success: function( result ) {
-
             chargerpanier();
             $('#successSuppressionItemModal').modal('toggle');
         },
         error : function (result){
-            console.log("erreur");
             $('#erreurSuppressionItemModal').modal('toggle');
         }
     });
 }
 
 function ajouterItem(item){
-
 $.ajax({
     url:"/clients/"+ID_CLIENT+"/panier/" + item,
     method:"PUT",
@@ -141,24 +140,47 @@ $.ajax({
     success: function( result ) {
 
         chargerpanier();
-    }})
+    },
+    statusCode: {
+        400: function () {
+            $('#limiteInventaire').modal('show');
+        }
+    }
+});
 }
 
 function enleverItem(item){
+    getItem(item).then(function(result) {
+        if (result.quantite > 1) {
+            $.ajax({
+                url:"/clients/"+ID_CLIENT+"/panier/" + item,
+                method:"PUT",
+                data: {'quantite': -1},
+                beforeSend: function (xhr){
+                    xhr.setRequestHeader('Authorization', "Basic "+ TOKEN_CLIENT);
+                },
+                success: function() {
 
-    $.ajax({
-        url:"/clients/"+ID_CLIENT+"/panier/" + item,
-        method:"PUT",
-        data: {'quantite': -1},
-        beforeSend: function (xhr){
-            xhr.setRequestHeader('Authorization', "Basic "+ TOKEN_CLIENT);
-        },
-        success: function( result ) {
-
-            chargerpanier();
-        }})
+                    chargerpanier();
+                }});
+        }
+    });
 }
 
+function getItem(idItem) {
+    return new Promise(function(resolve) {
+        $.ajax({
+            url: "/clients/" + ID_CLIENT + "/panier/" + idItem,
+            method: "GET",
+            beforeSend: function (xhr){
+                xhr.setRequestHeader('Authorization', "Basic "+ TOKEN_CLIENT);
+            },
+            success: function( result ) {
+                resolve(result);
+            },
+        });
+    });
+}
 
 function load_panier(item) {
 
