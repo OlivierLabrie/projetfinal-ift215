@@ -1,16 +1,24 @@
+let categorie;
+
 function chargercategorie(){
+    getCategorie();
     $.ajax({
         url: "/categorie",
         success: function( result ) {
             $.each(result, function (key, value) {
-                if(value.categorie.id === 1){
+                if(value.categorie.id === categorie){
                     item = item_to_html_categorie(value);
                     $('#list_items').append(item);}
             });
 
-            set_panier();
+            set_panier_categorie();
         }
     });
+}
+
+function getCategorie() {
+    let url = new URL(window.location.href.replace(/#/g,""));
+    categorie = url.searchParams.get("categorie");
 }
 
 
@@ -34,7 +42,7 @@ function item_to_html_categorie(item){
         .append('<br />')
         .append('<li>' + item.description + '</li>')
     cart = $('<p class="w-100 display-6 text-center">\n' +
-        ' <button type="button" class="btn btn-primary position-relative" onclick="add_item(['+item.id+'])">\n' +
+        ' <button type="button" class="btn btn-primary position-relative" onclick="add_item_categorie(['+item.id+'])">\n' +
         ' <i class="bi bi-cart-plus"></i>\n' +
         ' </button>\n' +
         '</p>')
@@ -50,7 +58,7 @@ function item_to_html_categorie(item){
 }
 
 
-function chargerpanier(){
+function chargerpaniercategorie(){
     $.ajax({
         url: "/clients/"+ID_CLIENT+"/panier",
         method:"GET",
@@ -63,7 +71,6 @@ function chargerpanier(){
             $.each(result.items, function (key, value) {
                 item = load_panier(value);
                 $('#body_table').append(item);
-                chargerTotal();
 
             });
         }
@@ -71,7 +78,7 @@ function chargerpanier(){
 }
 
 
-function set_panier() {
+function set_panier_categorie() {
     $.ajax({
         url: "/clients/"+ID_CLIENT+"/panier",
         method:"GET",
@@ -85,7 +92,7 @@ function set_panier() {
 }
 
 
-function add_item(item) {
+function add_item_categorie(item) {
     let id_item = item[0];
 
     $.ajax({
@@ -101,69 +108,3 @@ function add_item(item) {
     });
 }
 
-function remove_item(item) {
-    let id_item = item[0];
-    $.ajax({
-        url: "/clients/"+ID_CLIENT+"/panier/" + id_item,
-        method:"DELETE",
-        beforeSend: function (xhr){
-            xhr.setRequestHeader('Authorization', "Basic "+ TOKEN_CLIENT);
-        },
-        success: function( result ) {
-
-            chargerpanier();
-        }
-    });
-}
-
-function ajouterItem(item){
-
-    $.ajax({
-        url:"/clients/"+ID_CLIENT+"/panier/" + item,
-        method:"PUT",
-        data: {'quantite': 1},
-        beforeSend: function (xhr){
-            xhr.setRequestHeader('Authorization', "Basic "+ TOKEN_CLIENT);
-        },
-        success: function( result ) {
-
-            chargerpanier();
-        }})
-}
-
-function enleverItem(item){
-
-    $.ajax({
-        url:"/clients/"+ID_CLIENT+"/panier/" + item,
-        method:"PUT",
-        data: {'quantite': -1},
-        beforeSend: function (xhr){
-            xhr.setRequestHeader('Authorization', "Basic "+ TOKEN_CLIENT);
-        },
-        success: function( result ) {
-
-            chargerpanier();
-        }})
-}
-
-
-function load_panier(item) {
-
-
-    image = $('<img src="../images/' + item.nomProduit + '.png" style = "border-right: 2px solid #666DF2"/>');
-    nom = $('<td></td>').append(item.nomProduit);
-    prix = $('<td></td>').append(item.prix);
-    qte = $('<td><button onclick="ajouterItem('+ item.id + ')">+</button><button onclick="enleverItem('+ item.id + ')">-</button>             </td>').append(item.quantite);
-    total = $('<td></td>').append(Math.round(item.quantite * item.prix * 100) / 100);
-    trash = $('<td></td>')
-        .append('<button type="button" class="btn" onClick="remove_item([' + item.id + '])"><span class="bi bi-trash" aria-hidden="true"></span></button>')
-
-
-    return $('<tr style = "border: 4px solid #666DF2"></tr>').append(image).append(nom).append(prix).append(qte).append(total).append(trash);
-}
-
-
-
-function confirmation(){
-    window.location.replace('#/confirmationcommande');
-}

@@ -1,3 +1,5 @@
+let prixLivraison = 0;
+
 function chargerconfirmationcommande(){
     $.ajax({
         url: "/clients/"+ID_CLIENT+"/panier",
@@ -28,7 +30,7 @@ function load_panier_commande(item) {
     trash = $('<td></td>')
         .append('<button type="button" class="btn" onClick="remove_item([' + item.id + '])"><span class="bi bi-trash" aria-hidden="true"></span></button>')
 
-
+    prixLivraison = 15;
     return $('<tr style = "border: 4px solid #666DF2"></tr>').append(image).append(nom).append(qte).append(prix);
 }
 
@@ -43,7 +45,8 @@ function chargerTotalCommande(){
         success: function( result){
             $('#prixTOT').text(Math.round(result.valeur * 100) / 100 + ' $');
             $('#buttonConfirmer').text('Confirmer la commande');
-            calculerTaxes(result.valeur);
+            $('#livraison').text(prixLivraison + ' $');
+            calculerTaxes();
             calculerGrandTotal();
             for( let i in result.items){
                 item = item_to_html(result.items[i])
@@ -53,7 +56,7 @@ function chargerTotalCommande(){
     });
 }
 
-function calculerTaxes(prix){
+function calculerTaxes(){
     $.ajax({
         url: "/clients/"+ID_CLIENT+"/panier",
         method:"GET",
@@ -79,7 +82,7 @@ function calculerGrandTotal(){
             xhr.setRequestHeader('Authorization', "Basic "+ TOKEN_CLIENT);
         },
         success: function( result){
-            $('#grandtotal').text(Math.round(((result.valeur * 0.15) + result.valeur + 15) * 100) / 100 + ' $');
+            $('#grandtotal').text(Math.round(((result.valeur * 0.15) + result.valeur + prixLivraison) * 100) / 100 + ' $');
             for( let i in result.items){
                 item = item_to_html(result.items[i])
                 $('#list_panier').append(item);
@@ -102,6 +105,10 @@ function vente(){
         },
         success: function(result) {
             chargerconfirmationcommande();
+            chargerTotalCommande();
+            calculerTaxes();
+            calculerGrandTotal();
+            prixLivraison = 0;
             console.log("Successs ")
             $('#succesSuppressionModal').modal('toggle');
         },
