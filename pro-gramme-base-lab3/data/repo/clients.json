@@ -27,7 +27,7 @@
                         "quantite": 4
                     }
                 ],
-                "status": "en_route",
+                "status": "prepare",
                 "date": "2021-11-13T21:44:38.858Z"
             },
             {
@@ -145,6 +145,39 @@
                 ],
                 "status": "reçue",
                 "date": "2022-11-27T21:50:43.722Z"
+            },
+            {
+                "id": 12,
+                "idClient": "1",
+                "montant": 622.82,
+                "produits": [
+                    {
+                        "id": 0,
+                        "idProduit": 3,
+                        "nomProduit": "Poids",
+                        "descriptionProduit": "Poids et haltère de grande qualité",
+                        "prix": 123.45,
+                        "quantite": 5
+                    },
+                    {
+                        "id": 1,
+                        "idProduit": 2,
+                        "nomProduit": "Concombre",
+                        "descriptionProduit": "Cucurbitaceae de forme cylindrique",
+                        "prix": 2.23,
+                        "quantite": 1
+                    },
+                    {
+                        "id": 2,
+                        "idProduit": 1,
+                        "nomProduit": "Tomate",
+                        "descriptionProduit": "Tomate de serre",
+                        "prix": 3.34,
+                        "quantite": 1
+                    }
+                ],
+                "status": "reçue",
+                "date": "2022-11-27T22:24:44.826Z"
             }
         ]
     },

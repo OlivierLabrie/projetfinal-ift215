@@ -5,21 +5,24 @@
     <title>Title</title>
 </head>
 <body>
-<button class="button_vers_accueil" onclick="retourAccueil()">Retour à l'accueil</button>
+<div class="button_vers_accueil">
+    <button type="button" class="btn btn-secondary" onclick="window.location.replace('#/')">
+        <i class="bi bi-caret-left-fill"></i> Retour à l'accueil
+    </button>
+</div>
 <div>
     <section id="connexion">
 
-        <h2  href="#para-1">Connexion</h2>
+        <h2>Connexion</h2>
     </section>
 </div>
-
 <section id="logo-connexion">
-    <p >
+    <p>
         <img src="images/login.png" alt="Logo de Pro-Gramme" width="200"  height="200"/>
-    <p/>
+    </p>
 </section>
 <section id="section-inscription">
-    <form method="post" action="commandes.html">
+    <form method="post" >
         <fieldset id="#renseignement-auth">
             <div class="group">
                 <label for="courriel"> Courriel</label>
@@ -31,9 +34,9 @@
             </div>
         </fieldset>
         <div class="group submit-group">
-            <input type="submit" value="Connexion" onclick="accesCommande()">
+            <input type="button" class="btn btn-outline-secondary" value="Connexion" onclick="versCommande()" />
         </div>
     </form>
 </section>
 </body>
-<html/>
+</html>
