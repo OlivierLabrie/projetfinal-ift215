@@ -62,11 +62,15 @@ function fermetureMessageInvalide(){
 function validationPrenom(){
     var message = document.getElementById(`prenom`).value;
     var pattern = new RegExp(/[~`!#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?]/);
+    var patternNumber = new RegExp(/[0-9]/);
 
     if(message == "" || message == null){
         document.getElementById('prenom').setAttribute("class","form-control is-invalid")
     }
     else if(pattern.test(message)){
+        document.getElementById('prenom').setAttribute("class","form-control is-invalid")
+    }
+    else if(patternNumber.test(message)){
         document.getElementById('prenom').setAttribute("class","form-control is-invalid")
     }
     else{
@@ -76,12 +80,16 @@ function validationPrenom(){
 
 function validationNom(){
     var message = document.getElementById(`nom`).value;
-    var pattern = new RegExp(/[~`!#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?]/);
+    var pattern = new RegExp(/[~`!#$%\^&*+=\-\[\]\\';,/{}|\\":<>()\?]/);
+    var patternNumber = new RegExp(/[0-9]/);
 
     if(message == "" || message == null){
         document.getElementById('nom').setAttribute("class","form-control is-invalid")
     }
     else if(pattern.test(message)){
+        document.getElementById('nom').setAttribute("class","form-control is-invalid")
+    }
+    else if(patternNumber.test(message)){
         document.getElementById('nom').setAttribute("class","form-control is-invalid")
     }
     else{
@@ -91,9 +99,12 @@ function validationNom(){
 
 function validationAge(){
     var message = document.getElementById(`age`).value;
-
+    var pattern = new RegExp(/[A-Za-z]/);
 
     if(message == "" || message == null){
+        document.getElementById('age').setAttribute("class","form-control is-invalid")
+    }
+    else if(pattern.test(message)){
         document.getElementById('age').setAttribute("class","form-control is-invalid")
     }
     else{
@@ -114,8 +125,12 @@ function validationAdresse(){
 
 function validationPays(){
     var message = document.getElementById(`pays`).value;
+    var patternNumber = new RegExp(/[0-9]/);
 
     if(message == "" || message == null){
+        document.getElementById('pays').setAttribute("class","form-control is-invalid")
+    }
+    else if(patternNumber.test(message)){
         document.getElementById('pays').setAttribute("class","form-control is-invalid")
     }
     else{
@@ -129,6 +144,7 @@ function validationCourriel(){
     if(message == "" || message == null){
         document.getElementById('sonCourriel').setAttribute("class","form-control is-invalid")
     }
+
     else{
         document.getElementById('sonCourriel').setAttribute("class","form-control is-valid")
     }
