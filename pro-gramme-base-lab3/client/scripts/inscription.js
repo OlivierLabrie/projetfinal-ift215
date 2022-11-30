@@ -21,6 +21,10 @@ function attacherListenerMenuGauche(){
     }
 }
 
+function validateConnexion(){
+    var error = document.getElementById("courriel").value;
+}
+
 
 function versCommande(){
     let COURRIEL = document.getElementById("courriel").value;
@@ -44,7 +48,10 @@ function versCommande(){
             }
         },
         error: function (result) {
-            window.location.replace('#/');
+            document.getElementById(`error`).setAttribute("style","display:block")
+            setTimeout(()=>{
+                document.getElementById(`error`).setAttribute("style","display:none")
+            },5500)
         }
     });
 }

@@ -378,7 +378,16 @@ dl {
 
 }
 
+.dataInscription{
+    width: 98%;
+    margin-left: 2%;
+}
 
 .hidden {
     display: none;
 }
+
+#error{
+    margin-top: 3%;
+}
+

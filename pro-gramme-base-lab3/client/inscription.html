@@ -32,6 +32,10 @@
                 </div>
                 <div class="button-connexion">
                     <input type="button" class="btn btn-primary" value="Connexion" onclick="versCommande()" />
+                    <div id="error" class="alert alert-danger" role="alert" style='display:none'>
+                        Vous avez entré un courriel ou un mot de passe invalide !
+                        Veuillez réessayer de nouveau!
+                    </div>
                 </div>
             </form>
         </div>
@@ -41,57 +45,59 @@
         <div class="registre">
             <h2>Inscription</h2>
         </div>
-        <form class="needs-validation" novalidate>
-            <div class="form-row">
-                <div class="col-md-4 mb-3">
-                    <label for="prenom">Prénom</label>
-                    <input type="text" class="form-control" id="prenom" placeholder="Entrer votre prénom" required>
-                    <div class="invalid-feedback">
-                        Prenom invalide
+        <div class="dataInscription">
+            <form class="needs-validation" novalidate>
+                <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                        <label for="prenom">Prénom</label>
+                        <input type="text" class="form-control" id="prenom" placeholder="Entrer votre prénom" required>
+                        <div class="invalid-feedback">
+                            Prenom invalide
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom02">Nom</label>
+                        <input type="text" class="form-control" id="validationCustom02" placeholder="Entrer votre nom de famille" required>
+                        <div class="invalid-feedback">
+                            Nom de famille invalide
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-3">
-                    <label for="validationCustom02">Nom</label>
-                    <input type="text" class="form-control" id="validationCustom02" placeholder="Entrer votre nom de famille" required>
-                    <div class="invalid-feedback">
-                      Nom de famille invalide
+                <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                        <label for="age">Age</label>
+                        <input type="text" class="form-control" id="age" placeholder="Entrer votre age" required>
+                        <div class="invalid-feedback">
+                            L'age entrée est invalide.
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="adresse">Adresse</label>
+                        <input type="text" class="form-control" id="adresse" placeholder="Entrer votre adresse" required>
+                        <div class="invalid-feedback">
+                            Veuillez entrer une adresse valide
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="pays">Pays</label>
+                        <input type="text" class="form-control" id="pays" placeholder="Entrer le pays où vous habitez" required>
+                        <div class="invalid-feedback">
+                            Veuillez entrer un pays valide
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="sonCourriel">Courriel</label>
+                        <input type="text" class="form-control" id="sonCourriel" placeholder="Entrer votre courriel" required>
+                        <div class="invalid-feedback">
+                            Veuillez entrer un courriel valide
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="form-row">
-                <div class="col-md-4 mb-3">
-                    <label for="age">Age</label>
-                    <input type="text" class="form-control" id="age" placeholder="Entrer votre age" required>
-                    <div class="invalid-feedback">
-                        L'age entrée est invalide.
-                    </div>
+                <div class="button_inscription">
+                    <button class="btn btn-primary" type="submit">S'inscrire</button>
                 </div>
-                <div class="col-md-4 mb-3">
-                    <label for="adresse">Adresse</label>
-                    <input type="text" class="form-control" id="adresse" placeholder="Entrer votre adresse" required>
-                    <div class="invalid-feedback">
-                        Veuillez entrer une adresse valide
-                    </div>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <label for="pays">Pays</label>
-                    <input type="text" class="form-control" id="pays" placeholder="Entrer le pays où vous habitez" required>
-                    <div class="invalid-feedback">
-                        Veuillez entrer un pays valide
-                    </div>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <label for="sonCourriel">Courriel</label>
-                    <input type="text" class="form-control" id="sonCourriel" placeholder="Entrer votre courriel" required>
-                    <div class="invalid-feedback">
-                        Veuillez entrer un courriel valide
-                    </div>
-                </div>
-            </div>
-            <div class="button_inscription">
-                <button class="btn btn-primary" type="submit">S'inscrire</button>
-            </div>
-        </form>
+            </form>
+        </div>
     </div>
 </div>
 </body>
