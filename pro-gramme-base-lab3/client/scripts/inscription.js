@@ -16,13 +16,10 @@ function inscrireNewClient(){
             document.getElementById(`messageValide`).setAttribute("style","display:block")
             setTimeout(()=>{
                 document.getElementById(`messageValide`).setAttribute("style","display:none")
-            },3000)
+            },2500)
         },
         error: function(result){
             document.getElementById(`messageInvalide`).setAttribute("style","display:block")
-            setTimeout(()=>{
-                document.getElementById(`messageInvalide`).setAttribute("style","display:none")
-            },3000)
         }
     });
 }
@@ -50,9 +47,14 @@ function versCommande(){
         },
         error: function (result) {
             document.getElementById(`error`).setAttribute("style","display:block")
-            setTimeout(()=>{
-                document.getElementById(`error`).setAttribute("style","display:none")
-            },5500)
         }
     });
+}
+
+function fermetureMessageError(){
+    document.getElementById(`error`).setAttribute("style","display:none")
+}
+
+function fermetureMessageInvalide(){
+    document.getElementById(`messageInvalide`).setAttribute("style","display:none")
 }
