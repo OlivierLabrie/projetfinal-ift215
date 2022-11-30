@@ -9,33 +9,8 @@
         "courriel": "aaa@bbb.com",
         "mdp": "$2b$08$CEfAuisfWI/driqC4REyfOo/y8RG0g1dw7ngClRLBk1QANEs.U53u",
         "panier": {
-            "valeur": 132.35999999999999,
-            "items": [
-                {
-                    "id": 1,
-                    "idProduit": 1,
-                    "nomProduit": "Tomate",
-                    "descriptionProduit": "Tomate de serre",
-                    "prix": 3.34,
-                    "quantite": 2
-                },
-                {
-                    "id": 2,
-                    "idProduit": 3,
-                    "nomProduit": "Poids",
-                    "descriptionProduit": "Poids et haltère de grande qualité",
-                    "prix": 123.45,
-                    "quantite": 1
-                },
-                {
-                    "id": 3,
-                    "idProduit": 2,
-                    "nomProduit": "Concombre",
-                    "descriptionProduit": "Cucurbitaceae de forme cylindrique",
-                    "prix": 2.23,
-                    "quantite": 1
-                }
-            ]
+            "valeur": 0,
+            "items": []
         },
         "historique": [
             {
@@ -175,7 +150,24 @@
                 "date": "2022-11-29T18:56:03.188Z"
             },
             {
-                "id": 0,
+                "id": -1,
+                "idClient": "1",
+                "montant": 2.37,
+                "produits": [
+                    {
+                        "id": 0,
+                        "idProduit": 0,
+                        "nomProduit": "Banane",
+                        "descriptionProduit": "Banane jaune",
+                        "prix": 0.79,
+                        "quantite": 3
+                    }
+                ],
+                "status": "recue",
+                "date": "2022-11-29T19:45:33.948Z"
+            },
+            {
+                "id": -1,
                 "idClient": "1",
                 "montant": 0.79,
                 "produits": [
@@ -188,11 +180,44 @@
                         "quantite": 1
                     }
                 ],
-                "status": "prepare",
+                "status": "recue",
                 "date": "2022-11-29T18:56:50.475Z"
             },
             {
-                "id": 1,
+                "id": 2,
+                "idClient": "3",
+                "montant": 132.35999999999999,
+                "produits": [
+                    {
+                        "id": 1,
+                        "idProduit": 1,
+                        "nomProduit": "Tomate",
+                        "descriptionProduit": "Tomate de serre",
+                        "prix": 3.34,
+                        "quantite": 2
+                    },
+                    {
+                        "id": 2,
+                        "idProduit": 3,
+                        "nomProduit": "Poids",
+                        "descriptionProduit": "Poids et haltère de grande qualité",
+                        "prix": 123.45,
+                        "quantite": 1
+                    },
+                    {
+                        "id": 3,
+                        "idProduit": 2,
+                        "nomProduit": "Concombre",
+                        "descriptionProduit": "Cucurbitaceae de forme cylindrique",
+                        "prix": 2.23,
+                        "quantite": 1
+                    }
+                ],
+                "status": "recue",
+                "date": "2022-11-30T22:56:31.893Z"
+            },
+            {
+                "id": -1,
                 "idClient": "1",
                 "montant": 2423.9300000000003,
                 "produits": [
@@ -263,23 +288,6 @@
                 ],
                 "status": "recue",
                 "date": "2022-11-29T19:01:46.744Z"
-            },
-            {
-                "id": -1,
-                "idClient": "1",
-                "montant": 2.37,
-                "produits": [
-                    {
-                        "id": 0,
-                        "idProduit": 0,
-                        "nomProduit": "Banane",
-                        "descriptionProduit": "Banane jaune",
-                        "prix": 0.79,
-                        "quantite": 3
-                    }
-                ],
-                "status": "recue",
-                "date": "2022-11-29T19:45:33.948Z"
             }
         ]
     },
@@ -311,6 +319,32 @@
             "valeur": 0,
             "items": []
         },
-        "historique": []
+        "historique": [
+            {
+                "id": 0,
+                "idClient": "3",
+                "montant": 5.57,
+                "produits": [
+                    {
+                        "id": 0,
+                        "idProduit": 1,
+                        "nomProduit": "Tomate",
+                        "descriptionProduit": "Tomate de serre",
+                        "prix": 3.34,
+                        "quantite": 1
+                    },
+                    {
+                        "id": 1,
+                        "idProduit": 2,
+                        "nomProduit": "Concombre",
+                        "descriptionProduit": "Cucurbitaceae de forme cylindrique",
+                        "prix": 2.23,
+                        "quantite": 1
+                    }
+                ],
+                "status": "livree",
+                "date": "2022-11-30T23:10:53.584Z"
+            }
+        ]
     }
 ]

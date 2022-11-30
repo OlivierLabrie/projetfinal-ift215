@@ -11,8 +11,6 @@ function chargercommandeclient() {
         },
         success: function(result) {
             vente_info = result;
-            console.log(vente_info);
-
             getClient(vente_info.idClient).then(function(client) {
                 $('#client_name').append(client.prenom + ' ' + client.nom);
                 $('#client_address').append(client.adresse);

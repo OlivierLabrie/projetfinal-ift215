@@ -75,7 +75,7 @@ class CollectionClient {
      */
   recupereClient(id) {
     if (id > -1) {
-      return this.liste_clients.find(x => x.id === id);
+      return this.liste_clients.find(x => x.id == id);
     } else {
       return this.liste_clients;
     }
