@@ -74,7 +74,7 @@ class CollectionCategorie {
     let listeLocale = [...this.liste_categories];
     if (nom) {
       listeLocale = listeLocale.filter(function (elem) {
-        return elem.nom === nom;
+        return elem.nom.toLowerCase().includes(nom.toLowerCase());
       });
     }
     if (description) {

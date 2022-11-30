@@ -82,7 +82,7 @@ class CollectionProduit {
     }
     if (nom) {
       listeLocale = listeLocale.filter(function (elem) {
-        return elem.nom.includes(nom);
+        return elem.nom.toLowerCase().includes(nom.toLowerCase());
       });
     }
     if (description) {

@@ -1,19 +1,9 @@
 <div class="search_bar">
   <div class="input-group mb-10">
-    <input type="search" class="form-control" placeholder="search">
+    <input type="search" class="form-control" placeholder="search" id="search-cat" onchange="charger()">
     <span class="input-group-text"><i class="bi-search"></i></span>
     </a>
   </div>
 </div>
 
-<div class="row">
-  <button class="button" onclick="toCategorie(2)">Poids et haltères</button>
-  <button class="button" onclick="toCategorie(1)">Nutrition</button>
-  <button class="button" onclick="toCategorie(3)">Vêtements de sport</button>
-  <button class="button" onclick="toCategorie(4)">Suppléments alimentaires</button>
-  <button class="button" onclick="toCategorie(5)">Plans d'entrainement</button>
-  <button class="button" onclick="toCategorie(6)">Autres</button>
-</div>
-
-
-
+<div class="row" id="row-cat"></div>
