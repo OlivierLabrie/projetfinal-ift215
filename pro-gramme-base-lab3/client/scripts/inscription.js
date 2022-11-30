@@ -58,3 +58,89 @@ function fermetureMessageError(){
 function fermetureMessageInvalide(){
     document.getElementById(`messageInvalide`).setAttribute("style","display:none")
 }
+
+function validationPrenom(){
+    var message = document.getElementById(`prenom`).value;
+    var pattern = new RegExp(/[~`!#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?]/);
+
+    if(message == "" || message == null){
+        document.getElementById('prenom').setAttribute("class","form-control is-invalid")
+    }
+    else if(pattern.test(message)){
+        document.getElementById('prenom').setAttribute("class","form-control is-invalid")
+    }
+    else{
+        document.getElementById('prenom').setAttribute("class","form-control is-valid")
+    }
+}
+
+function validationNom(){
+    var message = document.getElementById(`nom`).value;
+    var pattern = new RegExp(/[~`!#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?]/);
+
+    if(message == "" || message == null){
+        document.getElementById('nom').setAttribute("class","form-control is-invalid")
+    }
+    else if(pattern.test(message)){
+        document.getElementById('nom').setAttribute("class","form-control is-invalid")
+    }
+    else{
+        document.getElementById('nom').setAttribute("class","form-control is-valid")
+    }
+}
+
+function validationAge(){
+    var message = document.getElementById(`age`).value;
+
+
+    if(message == "" || message == null){
+        document.getElementById('age').setAttribute("class","form-control is-invalid")
+    }
+    else{
+        document.getElementById('age').setAttribute("class","form-control is-valid")
+    }
+}
+
+function validationAdresse(){
+    var message = document.getElementById(`adresse`).value;
+
+    if(message == "" || message == null){
+        document.getElementById('adresse').setAttribute("class","form-control is-invalid")
+    }
+    else{
+        document.getElementById('adresse').setAttribute("class","form-control is-valid")
+    }
+}
+
+function validationPays(){
+    var message = document.getElementById(`pays`).value;
+
+    if(message == "" || message == null){
+        document.getElementById('pays').setAttribute("class","form-control is-invalid")
+    }
+    else{
+        document.getElementById('pays').setAttribute("class","form-control is-valid")
+    }
+}
+
+function validationCourriel(){
+    var message = document.getElementById(`sonCourriel`).value;
+
+    if(message == "" || message == null){
+        document.getElementById('sonCourriel').setAttribute("class","form-control is-invalid")
+    }
+    else{
+        document.getElementById('sonCourriel').setAttribute("class","form-control is-valid")
+    }
+}
+
+function validationMDP(){
+    var message = document.getElementById(`motDePasse`).value;
+
+    if(message == "" || message == null){
+        document.getElementById('motDePasse').setAttribute("class","form-control is-invalid")
+    }
+    else{
+        document.getElementById('motDePasse').setAttribute("class","form-control is-valid")
+    }
+}

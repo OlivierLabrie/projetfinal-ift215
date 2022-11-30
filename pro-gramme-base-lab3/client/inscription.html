@@ -56,54 +56,54 @@
             <form class="needs-validation" novalidate>
                 <div class="form-row">
                     <div class="col-11">
-                        <label for="prenom">Prénom</label>
-                        <input type="text" class="form-control" id="prenom" placeholder="Entrer votre prénom" onclick="fermetureMessageInvalide()" required>
+                        <label for="prenom" class="form-label ">Prénom</label>
+                        <input type="text" class="form-control" id="prenom" placeholder="Entrer votre prénom" onclick="fermetureMessageInvalide()" onchange="validationPrenom()" required>
                         <div class="invalid-feedback">
-                            Prenom invalide
+                            Les caractères suivants sont interdit : ~`!#$%\^&*+=-[]';,/{}|":<>?
                         </div>
                     </div>
                     <div class="col-11">
                         <label for="nom">Nom</label>
-                        <input type="text" class="form-control" id="nom" placeholder="Entrer votre nom de famille" onclick="fermetureMessageInvalide()" required>
+                        <input type="text" class="form-control" id="nom" placeholder="Entrer votre nom de famille" onclick="fermetureMessageInvalide()" onchange="validationNom()" required>
                         <div class="invalid-feedback">
-                            Nom de famille invalide
+                            Les caractères suivants sont interdit : ~`!#$%\^&*+=-[]';,/{}|":<>?
                         </div>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="col-11">
                         <label for="age">Age</label>
-                        <input type="text" class="form-control" id="age" placeholder="Entrer votre age" onclick="fermetureMessageInvalide()" required>
+                        <input type="text" class="form-control" id="age" placeholder="Entrer votre age" onclick="fermetureMessageInvalide()" onchange="validationAge()" required>
                         <div class="invalid-feedback">
                             L'age entrée est invalide.
                         </div>
                     </div>
                     <div class="col-11">
                         <label for="adresse">Adresse</label>
-                        <input type="text" class="form-control" id="adresse" placeholder="Entrer votre adresse" onclick="fermetureMessageInvalide()" required>
+                        <input type="text" class="form-control" id="adresse" placeholder="Entrer votre adresse" onclick="fermetureMessageInvalide()" onchange="validationAdresse()" required>
                         <div class="invalid-feedback">
                             Veuillez entrer une adresse valide
                         </div>
                     </div>
                     <div class="col-11">
                         <label for="pays">Pays</label>
-                        <input type="text" class="form-control" id="pays" placeholder="Entrer le pays où vous habitez" onclick="fermetureMessageInvalide()" required>
+                        <input type="text" class="form-control" id="pays" placeholder="Entrer le pays où vous habitez" onclick="fermetureMessageInvalide()" onchange="validationPays()" required>
                         <div class="invalid-feedback">
                             Veuillez entrer un pays valide
                         </div>
                     </div>
                     <div class="col-11">
                         <label for="sonCourriel">Courriel</label>
-                        <input type="text" class="form-control" id="sonCourriel" placeholder="Entrer votre courriel" onclick="fermetureMessageInvalide()" required>
+                        <input type="text" class="form-control" id="sonCourriel" placeholder="Entrer votre courriel" onclick="fermetureMessageInvalide()" onchange="validationCourriel()" required>
                         <div class="invalid-feedback">
                             Veuillez entrer un courriel valide
                         </div>
                     </div>
                     <div class="col-11">
                         <label for="motDePasse">Mot de passe</label>
-                        <input type="text" class="form-control" id="motDePasse" placeholder="Entrer un mot de passe" onclick="fermetureMessageInvalide()" required>
+                        <input type="text" class="form-control" id="motDePasse" placeholder="Entrer un mot de passe" onclick="fermetureMessageInvalide()" onchange="validationMDP()" required>
                         <div class="invalid-feedback">
-                            Veuillez entrer un mot de passe valides
+                            Veuillez entrer un mot de passe valide
                         </div>
                     </div>
                 </div>
