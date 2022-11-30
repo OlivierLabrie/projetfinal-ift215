@@ -42,6 +42,12 @@
     </div>
     <div class="col-sm-1"></div>
     <div class="col-sm-5">
+        <div id="messageValide" class="alert alert-success" role="alert" style='display:none'>
+            Votre inscription a bien été enregistré dans notre registre !
+        </div>
+        <div id="messageInvalide" class="alert alert-warning" role="alert" style='display:none'>
+            Malheureusement, votre inscription n'a pas été enregistré dans notre registre !
+        </div>
         <div class="registre">
             <h2>Inscription</h2>
         </div>
@@ -56,8 +62,8 @@
                         </div>
                     </div>
                     <div class="col-md-4 mb-3">
-                        <label for="validationCustom02">Nom</label>
-                        <input type="text" class="form-control" id="validationCustom02" placeholder="Entrer votre nom de famille" required>
+                        <label for="nom">Nom</label>
+                        <input type="text" class="form-control" id="nom" placeholder="Entrer votre nom de famille" required>
                         <div class="invalid-feedback">
                             Nom de famille invalide
                         </div>
@@ -92,10 +98,17 @@
                             Veuillez entrer un courriel valide
                         </div>
                     </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="motDePasse">Mot de passe</label>
+                        <input type="text" class="form-control" id="motDePasse" placeholder="Entrer un mot de passe" required>
+                        <div class="invalid-feedback">
+                            Veuillez entrer un mot de passe valides
+                        </div>
+                    </div>
                 </div>
-                <div class="button_inscription">
-                    <button class="btn btn-primary" type="submit">S'inscrire</button>
-                </div>
+                    <div class="button_inscription">
+                        <input type="button" class="btn btn-primary" value="S'inscrire" onclick="inscrireNewClient()" />
+                    </div>
             </form>
         </div>
     </div>

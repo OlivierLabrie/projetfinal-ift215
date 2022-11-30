@@ -297,5 +297,20 @@
             "items": []
         },
         "historique": []
+    },
+    {
+        "id": 3,
+        "prenom": "Carla",
+        "nom": "Champagne",
+        "age": 35,
+        "adresse": "405 rue Saint-Denis",
+        "pays": "Canada",
+        "courriel": "carla@hotmail.com",
+        "mdp": "$2b$08$BRojgKKM8LidbDBtV0og9u8YuThuqjOWoou8bNQs1vN0GYmNsSNdi",
+        "panier": {
+            "valeur": 0,
+            "items": []
+        },
+        "historique": []
     }
 ]
