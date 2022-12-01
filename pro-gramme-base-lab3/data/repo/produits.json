@@ -5,7 +5,7 @@
         "nom": "Banane",
         "description": "Banane jaune",
         "prix": 0.79,
-        "qte_inventaire": 10,
+        "qte_inventaire": 9,
         "categorie": {
             "id": 1,
             "nom": "Nutrition",

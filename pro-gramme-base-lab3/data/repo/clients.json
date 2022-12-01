@@ -316,8 +316,17 @@
         "courriel": "carla@hotmail.com",
         "mdp": "$2b$08$BRojgKKM8LidbDBtV0og9u8YuThuqjOWoou8bNQs1vN0GYmNsSNdi",
         "panier": {
-            "valeur": 0,
-            "items": []
+            "valeur": 0.79,
+            "items": [
+                {
+                    "id": 0,
+                    "idProduit": 0,
+                    "nomProduit": "Banane",
+                    "descriptionProduit": "Banane jaune",
+                    "prix": 0.79,
+                    "quantite": 1
+                }
+            ]
         },
         "historique": [
             {

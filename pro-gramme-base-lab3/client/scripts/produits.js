@@ -1,7 +1,7 @@
 //const {validate} = require("express-validation");
 //const auth = require("../../middleware/auth");
 //const {gClients} = require("../../util/gestionnaires");
-let ID_CLIENT = 1;
+let ID_CLIENT = -1;
 let TOKEN_CLIENT;// = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZENsaWVudCI6MSwicm9sZSI6ImNsaWVudCIsImlhdCI6MTYzNjc1MjI1MywiZXhwIjoxODM2NzUyMjUzfQ.qMcKC0NeuVseNSeGtyaxUvadutNAfzxlhL5LYPsRB8k";
 let itemGlobal;
 
@@ -107,23 +107,28 @@ function item_to_html(item){
 
 
 function add_item(item) {
-    let id_item = item[0];
-    $.ajax({
-        url: "/clients/"+ID_CLIENT+"/panier",
-        method:"POST",
-        data: {"idProduit": id_item, "quantite": 1},
-        beforeSend: function (xhr){
-            xhr.setRequestHeader('Authorization', "Basic "+ TOKEN_CLIENT);
-        },
-        success: function( result ) {
-            $('#item_counter').text(result.items.length);
-        },
-        statusCode: {
-            400: function() {
-                $('#inventaireVide').modal('show');
-            }
-        },
-    });
+    if (ID_CLIENT == -1) {
+        $('#nonConnecte').modal('show');
+    }
+    else {
+        let id_item = item[0];
+        $.ajax({
+            url: "/clients/"+ID_CLIENT+"/panier",
+            method:"POST",
+            data: {"idProduit": id_item, "quantite": 1},
+            beforeSend: function (xhr){
+                xhr.setRequestHeader('Authorization', "Basic "+ TOKEN_CLIENT);
+            },
+            success: function( result ) {
+                $('#item_counter').text(result.items.length);
+            },
+            statusCode: {
+                400: function() {
+                    $('#inventaireVide').modal('show');
+                }
+            },
+        });
+    }
 }
 
 function remove_item(item) {
