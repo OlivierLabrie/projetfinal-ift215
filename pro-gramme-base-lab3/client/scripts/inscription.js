@@ -46,6 +46,7 @@ function versCommande(){
             $('#deconnexion').css('display', 'block');
 
             if(result.role === 'admin'){
+                $('#commandes').css('display', 'block');
                 window.location.replace('#/commandes')
             }
             else{
