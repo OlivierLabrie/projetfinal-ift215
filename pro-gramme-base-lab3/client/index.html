@@ -35,24 +35,25 @@
     <script src="scripts/categorie.js"></script>
 </head>
 <body>
+<div class="row">
+    <div class="col-12 text-center">
+        <a href="#"><img src="images/logo.png" alt="Logo de Pro-Gramme" /></a>
+    </div>
+</div>
 <header id="navigation">
-    <nav>
-        <a href="#"><img src="images/logo.png" alt="Logo de Pro-Gramme" /></a><br />
-        <div id="menu-principal">
-            <div class="barre-menu">
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <div class="menu-principal barre-menu navbar-brand abs">
                 <a href="#/" >Accueil</a>
                 <a href="#/produits">Produits</a>
-                <a href="#/inscription">Connexion</a>
-<!--                <div class="deroulant"><button class="btn-deroulant">À propos</button>-->
-<!--                    <div class="sous-menu">-->
-<!--                        <a href="#/points_de_vente">Points de ventes</a>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <a href="#/commandes">Employé</a>-->
+                <a id="connexion" href="#/inscription">Connexion</a>
+                <div id="deconnexion" onclick="deconnecter()">Déconnexion</div>
             </div>
+            <div class="ms-auto" id="nom-utilisateur">Olivier</div>
         </div>
     </nav>
 </header>
+
 <div id="corps-principal">
 </div>
 <footer>

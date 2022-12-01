@@ -31,7 +31,7 @@
         "nom": "Concombre",
         "description": "Cucurbitaceae de forme cylindrique",
         "prix": 2.23,
-        "qte_inventaire": 15,
+        "qte_inventaire": 12,
         "categorie": {
             "id": 1,
             "nom": "Nutrition",

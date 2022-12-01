@@ -38,6 +38,13 @@ function versCommande(){
             TOKEN_ADMIN = result.token;
             ID_CLIENT = result.idClient;
 
+            $('#nom-utilisateur').empty();
+            $('#nom-utilisateur').append('<i class="bi bi-person-circle"></i> ' + COURRIEL);
+            $('#nom-utilisateur').css('display', 'block');
+
+            $('#connexion').css('display', 'none');
+            $('#deconnexion').css('display', 'block');
+
             if(result.role === 'admin'){
                 window.location.replace('#/commandes')
             }

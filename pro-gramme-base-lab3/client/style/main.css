@@ -29,7 +29,39 @@ nav{
     display: inline-block;
 }
 
-.barre-menu a {
+#nom-utilisateur{
+    float:right;
+    font-size: 16px;
+    color: var(--couleur-menu);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: none;
+}
+
+#deconnexion:hover {
+    cursor: pointer;
+}
+
+#deconnexion {
+    display: none;
+}
+
+.navbar-brand.abs
+{
+    position: absolute;
+    width: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+nav {
+    height: 60px;
+}
+
+
+.barre-menu a, .barre-menu #deconnexion {
     float: left;
     font-size: 16px;
     color: var(--couleur-menu);
@@ -56,7 +88,7 @@ nav{
     transition: color 0.5s, background-color 0.5s;
 }
 
-.barre-menu a:hover, .deroulant:hover .btn-deroulant {
+.barre-menu a:hover, .deroulant:hover .btn-deroulant, .barre-menu #deconnexion:hover {
     background-color: var(--fond-menu-inverse);
     color: var(--couleur-menu-inverse);
 }
